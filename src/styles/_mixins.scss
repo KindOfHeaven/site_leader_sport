@@ -1,0 +1,42 @@
+@mixin transition($attribute: all, $time: .3s, $easing: linear) {
+	-webkit-transition: $attribute $time $easing;
+	   -moz-transition: $attribute $time $easing;
+	    -ms-transition: $attribute $time $easing;
+	     -o-transition: $attribute $time $easing;
+	        transition: $attribute $time $easing;
+}
+
+@mixin flex($direction: row, $content: space-between, $items: center, $wrap: nowrap, $type: flex) {
+	display: $type;
+	-webkit-flex-direction: $direction;
+	    -ms-flex-direction: $direction;
+	        flex-direction: $direction;
+	-webkit-justify-content: $content;
+	        justify-content: $content;
+	-webkit-align-items: $items;
+	        align-items: $items;
+	-webkit-flex-wrap: $wrap;
+	    -ms-flex-wrap: $wrap;
+	        flex-wrap: $wrap;
+}
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: ($breakpoint-value + 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
