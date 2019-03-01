@@ -81,7 +81,11 @@ const config = {
 
 gulp.task('html', function () {
     return gulp.src(path.src.html)
-        .pipe(pug({pretty: true}))
+        .pipe(pug({pretty: true}).on( 'error', notify.onError(
+            {
+                message: "<%= error.message %>",
+                title  : "Sass Error!"
+            })))
         .pipe(rename({dirname: ''}))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
