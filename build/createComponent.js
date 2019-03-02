@@ -1,4 +1,4 @@
-const { mkdirSync, writeFileSync } = require('fs')
+const { mkdirSync, writeFileSync, appendFileSync } = require('fs')
 const { getDirectoriesBasenames } =  require('./utils.js')
 const dirs = require('./dirs')
 
@@ -13,6 +13,7 @@ const componentPath = `${dirs.components}/${componentName}`
 
 //Create Directory
 mkdirSync(componentPath)
+appendFileSync(`./src/styles/_components.scss`, `\n@import "../components/${componentName}/${componentName}.scss";`);
 
 //styles 
 writeFileSync(`${componentPath}/${componentName}.scss`, '')

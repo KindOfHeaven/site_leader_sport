@@ -45,14 +45,14 @@ const path = {
             html: 'dist/',
             js: 'dist/js/',
             css: 'dist/css/',
-            img: 'dist/img/',
-            fonts: 'dist/fonts/'
+            img: 'dist/assets/images/',
+            fonts: 'dist/assets/fonts/'
         },
         src: { 
             html: ['src/pages/**/*.pug', '!src/pages/layout.pug'], 
-            js: 'src/pages/**/*.js',
+            js: 'src/**/*.js',
             css: 'src/styles/style.scss',
-            img: 'src/assets/images/**/*.*', 
+            img: ['src/assets/images/**/*.*', '!src/assets/images/svg'],
             fonts: 'src/assets/fonts/**/*.*'
         },
         watch: {
@@ -84,7 +84,7 @@ gulp.task('html', function () {
         .pipe(pug({pretty: true}).on( 'error', notify.onError(
             {
                 message: "<%= error.message %>",
-                title  : "Sass Error!"
+                title  : "Pug Error!"
             })))
         .pipe(rename({dirname: ''}))
         .pipe(gulp.dest(path.build.html))
@@ -119,7 +119,12 @@ gulp.task('js', function () {
     return gulp.src(path.src.js)
         .pipe(babel({
             presets: ['env']
-        }))
+        }).on( 'error', notify.onError(
+            {
+                message: "<%= error.message %>",
+                title  : "JavaScript Error!"
+            }))
+        )
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
@@ -155,7 +160,7 @@ gulp.task('fonts', function() {
 // SVG Sprite build
 
 gulp.task('svgSprite', function () {
-    return gulp.src('src/img/*/*.svg')
+    return gulp.src('src/assets/images/svg/*.svg')
         .pipe(svgmin({
             js2svg: {
                 pretty: true
@@ -172,11 +177,11 @@ gulp.task('svgSprite', function () {
         .pipe(svgSprite({
             mode: {
                 symbol: {
-                    sprite: "../src/img/sprite.svg",
+                    sprite: "../src/assets/images/template/sprite.svg",
                     render: {
                         scss: {
-                            dest:'./../src/pcss/partials/_sprite.pcss',
-                            template: "./src/pcss/partials/_sprite_template.pcss"
+                            dest:'./../src/components/icon/icon.scss',
+                            template: "./src/styles/_sprite_template.scss"
                         }
                     }
                 }
@@ -205,8 +210,7 @@ gulp.task('createDir', (cb) => {
 
     folders.forEach(dir => {
         if(!fs.existsSync(dir))     
-            fs.mkdirSync(dir), 
-            console.log('📁  folder created:', dir);        
+            fs.mkdirSync(dir)     
     });
     return cb();
 })

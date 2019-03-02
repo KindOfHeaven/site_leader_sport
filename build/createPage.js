@@ -1,4 +1,4 @@
-const { mkdirSync, writeFileSync } = require('fs')
+const { mkdirSync, writeFileSync, appendFileSync } = require('fs')
 const { getDirectoriesBasenames } =  require('./utils.js')
 const dirs = require('./dirs')
 
@@ -13,6 +13,8 @@ const pagePath = `${dirs.pages}/${pageName}`
 
 //Create Directory
 mkdirSync(pagePath)
+appendFileSync(`./src/styles/style.scss`, `\n@import "../pages/${pageName}/${pageName}";`);
+
 
 //styles 
 writeFileSync(`${pagePath}/${pageName}.scss`, '')
