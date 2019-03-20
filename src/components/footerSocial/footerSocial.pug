@@ -1,0 +1,7 @@
+mixin footerSocial(socials)
+	include ../icon/icon.pug
+	ul
+		each item in socials
+			li.footer__social--item
+				a.footer__social--link(href=item.href)
+					+icon(item.icon)

@@ -1,0 +1,39 @@
+.marker {
+	color: $dark-gray;
+	font-size: 24px;	
+	font-weight: 600;
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-transition: color .3s linear;
+	   -moz-transition: color .3s linear;
+	    -ms-transition: color .3s linear;
+	     -o-transition: color .3s linear;
+	        transition: color .3s linear;
+	&:hover {
+		color: $orange;
+	}
+	.marker__icon {
+		margin-right: 15px;
+		width: auto;
+		height: 30px;
+		display: inline-block;
+		.icon {
+			height: 30px;
+			color: $orange;
+		}
+		.phone {
+			width: 30px;
+			height: 30px;
+		}
+		.mail {
+			width: 35px;
+			height: 27px;
+		}
+	}
+}

@@ -1,4 +1,15 @@
 extends ../layout.pug
 
 block content
-	script(src="./js/main.js")
+	include ../../components/homeSection/homeSection.pug
+	include ../../components/formSection/formSection.pug
+	include ../../components/advantagesSection/advantagesSection.pug
+	include ../../components/moreSection/moreSection.pug
+	include ../../components/appSection/appSection.pug
+	include ../../components/contactsSection/contactsSection.pug
+	+homeSection()
+	+formSection()
+	+advantagesSection()
+	+moreSection()
+	+appSection()
+	+contactsSection()

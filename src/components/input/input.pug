@@ -1,0 +1,8 @@
+mixin input(input)
+	label.input(for=input.id)
+		if input.required
+			| #{input.text}*
+			input(id=input.id class=input.className type=input.type name=input.name required)
+		else 
+			| #{input.text}
+			input(id=input.id class=input.className type=input.type name=input.name)

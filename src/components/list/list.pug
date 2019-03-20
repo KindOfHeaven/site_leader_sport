@@ -1,0 +1,6 @@
+mixin list(items)
+	ul.list
+		each item in items
+			li.list__item
+				span.list__item--mark
+				| !{item}

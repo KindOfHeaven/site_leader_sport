@@ -1,3 +1,8 @@
+// Libs
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../node_modules/fancybox/dist/scss/jquery.fancybox.scss';
+
 // Main style's file.
 
 @import 'variables';
@@ -6,6 +11,27 @@
 @import 'reset';
 @import 'app';
 
+// Components
+
+@import 'components';
+
 // Pages
 
 @import '../pages/index/index';
+@import "../pages/news/news";
+@import "../pages/stock/stock";
+@import "../pages/gym/gym";
+@import "../pages/fighting/fighting";
+@import "../pages/functional/functional";
+@import "../pages/group/group";
+@import "../pages/yoga/yoga";
+@import "../pages/subscriptions/subscriptions";
+@import "../pages/subscription/subscription";
+@import "../pages/subscription1/subscription1";
+@import "../pages/subscription2/subscription2";
+@import "../pages/subscription3/subscription3";
+@import "../pages/subscription4/subscription4";
+@import "../pages/subscription5/subscription5";
+@import "../pages/subscription6/subscription6";
+@import "../pages/childroom/childroom";
+@import "../pages/dsa/dsa";

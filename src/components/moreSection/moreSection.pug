@@ -1,0 +1,22 @@
+mixin moreSection()
+	include ../moreList/moreList.pug
+	section.more-section
+		.container
+			h2.title А также
+			.more-section__inner
+				+moreList(
+					[
+						{'text': 'СТУДИЯ CYCLE, ЙОГА В ГАМАКАХ'},
+						{'text':'ЗОНА ФУНКЦИОНАЛЬНОГО ТРЕНИНГА С РАМОЙ FOREMAN'},
+						{'text':'ПРОСТОРНЫЕ РАЗДЕВАЛКИ С СОЛЯРИЯМИ И САУНАМИ'},
+						{'text':'КАФЕ И ФИТНЕС-БАР'},
+						{'text':'БЕСПЛАТНАЯ ПАРКОВКА'},
+						{'text':'БЕСПЛАТНАЯ ДЕТСКАЯ КОМНАТА (ДЛЯ ДЕТЕЙ С 3 ЛЕТ)'},
+						{'text':'ОЧИЩЕННАЯ И ОХЛАЖДЕННАЯ ПИТЬЕВАЯ ВОДА'}
+					]
+				)
+				.more-section__image
+					picture#interior
+						source(srcset="./assets/images/content/interior.webp" type="image/webp")
+						source(srcset="./assets/images/content/interior.jpg" type="image/jpeg")
+						img(src="./assets/images/content/interior.jpg" alt="interior")

@@ -1,1 +1,49 @@
 mixin header()
+	include ../navigation/navigation.pug
+	include ../icon/icon.pug
+	header.header#header
+		.header__inner
+			.container
+				a.header__logo(href="https://kindofheaven.ru/leader")
+					+icon('logo')
+				.header__info
+					a.header__info--phone(href="tel:88123801027") 8 (812) 380-10-27
+					a.header__info--callback#callback(href="javascript:void(0)") Обратный звонок
+		+navigation(
+			[
+				{title: 'Акции', href: 'http://kindofheaven.ru/leader/stock.html'},
+				{title: 'Расписание', href: 'javascript:void(0)'},
+				{title: 'Услуги', href: 'javascript:void(0)', submenu: 
+					[
+						{title: 'Тренажерный зал', href: 'http://kindofheaven.ru/leader/gym.html'},
+						{title: 'Групповые занятия', href: 'http://kindofheaven.ru/leader/group.html'},
+						{title: 'Функциональный тренинг', href: 'http://kindofheaven.ru/leader/functional.html'},
+						{title: 'Йога в гамаках', href: 'http://kindofheaven.ru/leader/yoga.html'},
+						{title: 'Единоборства', href: 'http://kindofheaven.ru/leader/fighting.html'},
+						{title: 'Массаж', href: 'javascript:void(0)'},
+						{title: 'Лечебная физкультура', href: 'javascript:void(0)'},
+						{title: 'Спортивная медицина', href: 'javascript:void(0)'}
+					]
+				},
+				{title: 'Абонементы', href: 'http://kindofheaven.ru/leader/subscriptions.html'},
+				{title: 'Детям', href: 'javascript:void(0)', submenu: 
+					[
+						{title: 'Детская спортивная академия', href: 'http://kindofheaven.ru/leader/dsa.html'},
+						{title: 'Расписание занятий ДСА', href: 'javascript:void(0)'},
+						{title: 'Детская комната', href: 'http://kindofheaven.ru/leader/childroom.html'}
+					]
+				},
+				{title: 'Галерея', href: 'javascript:void(0)'},
+				{title: 'Команда', href: 'javascript:void(0)'},
+				{title: 'Информация', href: 'javascript:void(0)', submenu: 
+					[
+						{title: 'Новости', href: 'http://kindofheaven.ru/leader/news.html'},
+						{title: 'Правила посещения детских секций', href: 'javascript:void(0)'},
+						{title: 'Правила клуба', href: 'javascript:void(0)'},
+						{title: 'Документы', href: 'javascript:void(0)'},
+						{title: 'Политика конфиденциальности', href: 'javascript:void(0)'}
+					]
+				},
+				{title: 'Контакты', href: 'javascript:void(0)'}
+			], "header__navigation"
+		)

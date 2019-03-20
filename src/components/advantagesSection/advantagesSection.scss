@@ -1,0 +1,38 @@
+.advantages-section {
+	@include respond-above(md) {
+		.title {
+			margin-top: 150px;
+		}
+	}
+	.advantages-section__list {
+		width: 100%;
+		height: auto;
+		display: flex;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-justify-content: space-around;
+		        justify-content: space-around;
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+		@include respond-below(md) {
+			-webkit-justify-content: space-between;
+			        justify-content: space-between;
+		}
+		.advantage {
+			flex: 1 1 33%;
+			&:nth-of-type(-n + 3) {
+				margin-bottom: 100px;
+			}
+			@include respond-below(md) {
+				flex: 1 1 100%;
+				&:nth-of-type(n) {
+					margin-bottom: 65px;
+				}
+			}
+		}
+	}
+}

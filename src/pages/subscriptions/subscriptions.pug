@@ -1,0 +1,157 @@
+extends ../layout.pug
+
+block content
+	include ../../components/serviceLine/serviceLine.pug
+	include ../../components/form/form.pug
+	.subscriptions-page
+		.container
+			h1.title Абонементы
+			.subscriptions__inner
+				+serviceLine(
+					[
+						{
+							'type': 'item',
+							'title': 'ЗОЛОТАЯ КАРТА',
+							'text': 'Безлимитное посещение + 3 персональные тренировки + дополнительный ящик для хранения личных вещей в клубе.',
+							'number': '01',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription1.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'УТРЕННИЙ',
+							'text': 'Посещение с 7.00 до 17.00 в будние дни + полный день в выходные и праздничные дни.',
+							'number': '03',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription2.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'СЕКЦИИ',
+							'text': 'Посещение конкретного направления в фитнесе (различные виды единоборств, функциональный тренинг, йога в гамаках).',
+							'number': '05',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription3.html'
+							} 
+						},
+						{
+							'type': 'quote',
+							'text': 'Каждое достижение начинается с решения попробовать',
+							'className': '_left'
+						}
+					]
+				)
+				+serviceLine(
+					[
+						{
+							'type': 'quote',
+							'text': 'Генетика.<br>Это просто отговорка'
+						},
+						{
+							'type': 'item',
+							'title': 'БЕЗЛИМИТНЫЙ',
+							'text': 'Безлимитное посещение + 1 персональная тренировка + фитнес тестирование.',
+							'number': '02',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription4.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'С ОГРАНИЧЕННЫМ ЧИСЛОМ ВИЗИТОВ',
+							'text': 'Безлимитное посещение. Количество визитов в клуб ограничено условиями договора.',
+							'number': '04',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription5.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'СТУДЕНЧЕСКИЙ',
+							'text': 'Безлимитное посещение + возможность «заморозить» абонемент на 60 дней (приостановка срока действия Договора).',
+							'number': '06',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription6.html'
+							} 
+						},
+					]
+				)
+				.subscriptions__mobile-order
+					+serviceLine(
+					[
+						{
+							'type': 'item',
+							'title': 'ЗОЛОТАЯ КАРТА',
+							'text': 'Безлимитное посещение + 3 персональные тренировки + дополнительный ящик для хранения личных вещей в клубе.',
+							'number': '01',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription1.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'БЕЗЛИМИТНЫЙ',
+							'text': 'Безлимитное посещение + 1 персональная тренировка + фитнес тестирование.',
+							'number': '02',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription2.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'УТРЕННИЙ',
+							'text': 'Посещение с 7.00 до 17.00 в будние дни + полный день в выходные и праздничные дни.',
+							'number': '03',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription3.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'С ОГРАНИЧЕННЫМ ЧИСЛОМ ВИЗИТОВ',
+							'text': 'Безлимитное посещение. Количество визитов в клуб ограничено условиями договора.',
+							'number': '04',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription4.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'СЕКЦИИ',
+							'text': 'Посещение конкретного направления в фитнесе (различные виды единоборств, функциональный тренинг, йога в гамаках).',
+							'number': '05',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription5.html'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'СТУДЕНЧЕСКИЙ',
+							'text': 'Безлимитное посещение + возможность «заморозить» абонемент на 60 дней (приостановка срока действия Договора).',
+							'number': '06',
+							'link': {
+								'text': 'Узнать больше',
+								'href': 'http://kindofheaven.ru/leader/subscription6.html'
+							} 
+						},
+						{
+							'type': 'quote',
+							'text': 'Каждое достижение начинается с решения попробовать',
+							'className': '_left'
+						}
+					]
+				)
+		+form('subscriptions-form')

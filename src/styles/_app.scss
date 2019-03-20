@@ -1,0 +1,63 @@
+html {
+	&.modalOpened {
+		&, body {
+			overflow: hidden;
+			position: relative;
+			height: 100%;
+			max-height: 100vh;
+			width: 100%;
+		}
+	}
+}
+body {
+	padding-top: $header-height;
+	overflow-x: hidden;
+}
+.container {
+	width: 100%;
+	max-width: map-get($breakpoints, 'lg');
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	padding: 0 15px;
+	max-height: 100%;
+}
+.title {
+	font-family: "Deja Vu Sans Condensed";
+	font-weight: 700;
+	color: $dark-gray;
+	font-size: 30px;
+	text-align: center;
+	margin: 100px 0;
+	text-transform: uppercase;
+	@include respond-below(md) {
+		font-size: 24px;
+		margin: 70px 0 65px 0;
+	}
+	position: relative;
+	top: -30px;
+	opacity: 0;
+	left: -30px;
+	-webkit-transition: top .3s linear .3s, left .3s linear .3s, opacity .3s linear .3s;
+	   -moz-transition: top .3s linear .3s, left .3s linear .3s, opacity .3s linear .3s;
+	    -ms-transition: top .3s linear .3s, left .3s linear .3s, opacity .3s linear .3s;
+	     -o-transition: top .3s linear .3s, left .3s linear .3s, opacity .3s linear .3s;
+	        transition: top .3s linear .3s, left .3s linear .3s, opacity .3s linear .3s;
+	&._animated {
+		top: 0;
+		opacity: 1;
+		left: 0;
+	}
+}
+.subtitle {
+	font-weight: 500;
+	color: $dark-gray;
+	font-size: 30px;
+	text-transform: uppercase;
+	@include respond-below(md) {
+		font-weight: 500;
+		color: $dark-gray;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+}

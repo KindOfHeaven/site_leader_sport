@@ -1,0 +1,164 @@
+extends ../layout.pug
+
+block content
+	include ../../components/serviceHead/serviceHead.pug
+	include ../../components/serviceLine/serviceLine.pug
+	include ../../components/photoItem/photoItem.pug
+	include ../../components/list/list.pug
+	include ../../components/form/form.pug
+	include ../../components/button/button.pug
+	include ../../components/modal/modal.pug
+	.functional-page
+		.container
+			h1.title ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ
+			+serviceHead({
+				'image': './assets/images/content/ft',
+				'text': 'Программа, построенная на постоянно варьируемых функциональных движениях, выполняемых с высокой интенсивностью.',
+				'link': 'javascript:void(0)'
+			})
+			.service-functional
+				+serviceLine(
+					[
+						{
+							'type': 'item',
+							'title': '25+ Уроков в неделю',
+							'text': 'Расписание тренировок составлено так, чтобы нашим клиентам было удобно посещать их регулярно',
+							'icon': 'calendar_new'
+						},
+						{
+							'type': 'item',
+							'title': '20+ видов инвентаря',
+							'text': 'Только самое популярное спортивное оборудование и инвентарь для функционального тренинга',
+							'icon': 'gym',
+							'link': {
+								'text': 'Расписание тренировок',
+								'href': 'javascript:void(0)',
+								'className': '_margin-top'
+							}
+						}
+					]
+				)
+				+serviceLine(
+					[
+						{
+							'type': 'quote',
+							'text': 'Пока ты не перестал пытаться, ты не проиграл'
+						},
+						{
+							'type': 'item',
+							'title': 'тренерский состав',
+							'text': 'Инструкторы клуба имеют высшее спортивное, медицинское образование, высокие спортивные достижения, разряды, регалии',
+							'icon': 'trainer',
+							'link': {
+								'text': 'Команда',
+								'href': 'javascript:void(0)'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': 'Без привязки к абонементу клуба',
+							'text': 'Возможность посещать занятия без покупки клубной карты.',
+							'icon': 'card'
+						}
+					]
+				)
+				.mobile__line
+					+serviceLine(
+						[
+							{
+							'type': 'quote',
+							'text': 'Пока ты не перестал пытаться, ты не проиграл'
+						},
+						{
+							'type': 'item',
+							'title': '25+ Уроков в неделю',
+							'text': 'Расписание тренировок составлено так, чтобы нашим клиентам было удобно посещать их регулярно',
+							'icon': 'calendar_new'
+						},
+						{
+							'type': 'item',
+							'title': 'тренерский состав',
+							'text': 'Инструкторы клуба имеют высшее спортивное, медицинское образование, высокие спортивные достижения, разряды, регалии',
+							'icon': 'trainer',
+							'link': {
+								'text': 'Команда',
+								'href': 'javascript:void(0)'
+							} 
+						},
+						{
+							'type': 'item',
+							'title': '20+ видов инвентаря',
+							'text': 'Только самое популярное спортивное оборудование и инвентарь для функционального тренинга',
+							'icon': 'gym',
+							'link': {
+								'text': 'Расписание тренировок',
+								'href': 'javascript:void(0)',
+								'className': '_margin-top'
+							}
+						},
+						{
+							'type': 'item',
+							'title': 'Без привязки к абонементу клуба',
+							'text': 'Возможность посещать занятия без покупки клубной карты.',
+							'icon': 'card'
+						}
+						]
+					)
+			.service__photo-items
+				+photoItem({
+					'text': '<p>Программа состоит из последовательности силовых упражнений, с конечной целью улучшения общей физической формы, реакции, выносливости и готовности к любой жизненной ситуации, требующей активных физических действий.</p>',
+					'image': './assets/images/content/photo-item1',
+					'right': '_right'
+				})
+				+photoItem({
+					'text': '<p>В программе комбинируются такие действия как: бег (спринтерские забеги), гребля (на специальных тренажерах), прыжки (со скакалкой или  на препятствия), лазание по канатам, работа с «железом» (гантели, гири, штанга), перенос предметов (медбол), упражнения на кольцах, переворачивание покрышек (огромных) и многие другие.</p>',
+					'image': './assets/images/content/photo-item2'
+				})
+			.service-subscriptions
+				p.subtitle АБОНЕМЕНТ НА ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ
+				.service-subscriptions__list
+					.service-subscriptions__item
+						p.service-subscriptions__item--amount 8 тренировок
+						.service-subscriptions__item--payment 3 500 руб./месяц
+					.service-subscriptions__item
+						p.service-subscriptions__item--amount 12 тренировок
+						.service-subscriptions__item--payment 3 500 руб./месяц
+					.service-subscriptions__item
+						p.service-subscriptions__item--amount 16 тренировок
+						.service-subscriptions__item--payment 3 500 руб./месяц
+					+button({
+						"link" : 'javascript:void(0)',
+						'text': 'Записаться',
+						'className': '_colored modal__open',
+						'id': 'formModal__open'
+					})
+				p.service--text 
+					| *Для клиентов клуба стоимость одной тренировки 
+					span 200 рублей.
+			.service-trainer
+				h2.subtitle СПЕЦИАЛЬНО ОБОРУДОВАННЫЙ ЗАЛ
+				+list([
+					'функциональная рама',
+					'гребной тренажер (2 шт)',
+					'большое разнообразие тренировочных дисков (вес 0,25-25 кг)',
+					'тумбы для запрыгивания',
+					'air bike',
+					'гантельный ряд и многое другое',
+					'гири, сэндбеги',
+					'канаты и кольца',
+					'сани Т-образные',
+					'грифы'
+				])
+				p.service--text Тренировки проходят в малых группах (5-15 человек) и полходят для всех уровней подготовленности.
+		+form('functional-form')
+	+modal({
+		'id': 'formModal',
+		'className': 'sub-modal'
+	})
+		p.sub-modal--title ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ
+		form#subForm
+			.form__inputs
+				+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
+				+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+			+agree({'id': 'agreement', 'name': 'agreement'})
+			+button({'id': 'formSectionButton', 'text': 'Записаться'})

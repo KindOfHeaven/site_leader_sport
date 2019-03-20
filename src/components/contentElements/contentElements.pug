@@ -1,0 +1,12 @@
+mixin contentElements(elements)
+	.content-elements
+		each item in elements
+			article.content-element
+				.content-element__img
+					picture
+						source(srcset=item.image+'.webp' type="image/webp")
+						source(srcset=item.image+'.jpg' type="image/jpeg")
+						img(src=item.image+'.jpg' alt=item.title)
+				.content-element__block
+					h3.content-element__block--title #{item.title}
+					.content-element__block--text !{item.content}

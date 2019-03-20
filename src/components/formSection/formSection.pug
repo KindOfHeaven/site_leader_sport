@@ -1,0 +1,20 @@
+mixin formSection()
+	include ../input/input.pug
+	include ../agree/agree.pug
+	include ../button/button.pug
+	section.form-section
+		.container
+			h2.form-section__intro
+				span Меняй
+				| Жизнь<br>сейчас
+			.form-section__form
+				p.form-section__form--title
+					| Запишись
+					span на бесплатный
+					| Гостевой визит
+				form
+					+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
+					+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+					+input({'text': 'E-mail', 'id': 'email', 'name': 'email', 'required': false, 'type': 'email', 'className': 'email-input'})
+					+agree({'id': 'agreement', 'name': 'agreement'})
+					+button({'id': 'formSectionButton', 'text': 'Записаться'})

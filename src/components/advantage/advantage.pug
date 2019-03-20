@@ -1,0 +1,6 @@
+mixin advantage(item)
+	include ../icon/icon.pug
+	.advantage
+		.advantage__icon
+			+icon(item.icon)
+		p.advantage__text !{item.text}

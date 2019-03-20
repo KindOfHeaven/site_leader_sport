@@ -1,0 +1,12 @@
+mixin advantagesSection()
+	include ../advantage/advantage.pug
+	section.advantages-section
+		.container
+			h2.title Наши преимущества
+			.advantages-section__list
+				+advantage({'icon':'plan', 'text': 'ОБЩАЯ ПЛОЩАДЬ <br> БОЛЕЕ <span>6 000</span> М2'})
+				+advantage({'icon':'gym', 'text': 'ТРЕНАЖЕРНЫЙ ЗАЛ <span>1300</span> М2 <br> С ЛУЧШИМ ОБОРУДОВАНИЕМ<br> В МИРЕ (TECHNOGYM, LIFE FITNESS, <br> HAMMER STRENGTH, TUFFSTUFF)'})
+				+advantage({'icon':'many', 'text': '<span>6</span> ЗАЛОВ<br> ГРУПОВЫХ ЗАНЯТИЙ,<br> БОЛЕЕ <span>160</span> ГРУППОВЫХM<br> УРОКОВ В НЕДЕЛЮ'})
+				+advantage({'icon':'trainer', 'text': 'БОЛЕЕ <span>50</span><br> ПРОФЕССИОНАЛЬНЫХ <br> ИНСТРУКТОРОВ'})
+				+advantage({'icon':'ring', 'text': 'ПРОФЕССИОНАЛЬНЫЙ<br> БОКСЕРСКИЙ РИНГ<br> И <span>5</span> 3АЛОВ ЕДИНОБОРСТВ'})
+				+advantage({'icon':'sale', 'text': 'БЕСПРОЦЕНТНАЯ<br> РАССРОЧКА'})

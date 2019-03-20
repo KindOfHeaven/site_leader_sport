@@ -1,0 +1,18 @@
+mixin navigation(navigation, className)
+	include ../icon/icon.pug
+	nav.navigation#nav(class=className)
+		ul.navigation__list#navList
+			each item in navigation
+				if item.submenu
+					li.navigation__item.has_submenu
+						a.navigation__link(href=item.href) #{item.title}
+						ul.navigation__submenu
+							each subitem in item.submenu
+								li.navigation__submenu--item
+									a.navigation__submenu--link(href=subitem.href) #{subitem.title}
+				else
+					li.navigation__item
+						a.navigation__link(href=item.href) #{item.title}
+		a.navigation__hamburger#hamburger(href="javascript:void(0)")
+			+icon('exit')
+			+icon('hamburger')

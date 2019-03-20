@@ -1,0 +1,25 @@
+mixin appSection()
+	section.app-section
+		.container
+			.app-section__inner
+				.app-section__image
+					picture
+						source(srcset="./assets/images/content/mobile_app.webp" type="image/webp")
+						source(srcset="./assets/images/content/mobile_app.jpg" type="image/jpeg")
+						img(src="./assets/images/content/mobile_app.jpg" alt="Mobile App")
+				.app-section__content
+					h2.app-section__content--title
+						span СКАЧИВАЙ
+						| НАШЕ ПРИЛОЖЕНИЕ <br>И БУДЬ В КУРСЕ
+					p.app-section__content--text Теперь ты можешь следить за новостями клуба, оперативно получать информацию об изменениях в расписании и специальных предложениях. Время выбирать лучшее!
+					.app-section__content--links
+						a(href="javascript:void(0)")
+							picture
+								source(srcset="./assets/images/content/appstore.webp" type="image/webp")
+								source(srcset="./assets/images/content/appstore.png" type="image/png")
+								img(src="./assets/images/content/appstore.png" alt="Mobile App")
+						a(href="javascript:void(0)")
+							picture
+								source(srcset="./assets/images/content/google.webp" type="image/webp")
+								source(srcset="./assets/images/content/google.png" type="image/png")
+								img(src="./assets/images/content/google.png" alt="Mobile App")

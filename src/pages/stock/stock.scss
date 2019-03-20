@@ -1,0 +1,19 @@
+.stock-page {
+	.stock-form {
+		display: none;
+	}
+	@include respond-below(lg) {
+		.stock-form {
+			background: $orange;
+			padding: 70px 0;
+			display: flex;
+			-webkit-flex-direction: row;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-align-items: flex-start;
+			        align-items: flex-start;
+		}
+	}
+}

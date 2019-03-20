@@ -1,0 +1,19 @@
+mixin homeSection()
+	include ../icon/icon.pug
+	section.home-section
+		.container
+			a.home-section__play(href="javascript:void(0)")
+				+icon('play')
+			.home-section__inner
+				h1.home-section__title
+					| Спортивный клуб
+					span лидер спорт
+				p.home-section__text Тренируйся в одном из самых больших и многофункциональных клубов Петербурга!
+		.home-section__social#homeSocial
+			span
+				+icon('vk')
+			span
+				+icon('facebook')
+			span
+				+icon('instagram')
+		a.down-arrow(href="javascript:void(0)")

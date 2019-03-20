@@ -1,0 +1,229 @@
+.photo-item {
+	height: 265px;
+	width: 100%;
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
+	position: relative;
+	@include respond-below(md) {
+		height: auto;
+		-webkit-flex-direction: column-reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
+		-webkit-justify-content: flex-start;
+		        justify-content: flex-start;
+		-webkit-align-items: stretch;
+		        align-items: stretch;
+	}
+	.photo-item__image {
+		padding-right: 130px;
+		width: 490px;
+		flex: 0 0 490px;
+		height: 100%;
+		@include respond-below(lg) {
+			padding-right: 30px;
+			width: 360px;
+			flex: 0 0 auto;
+		}
+		@include respond-below(md) {
+			padding: 0;
+			width: 100%;
+			flex: 0 0 100%;
+		}
+		picture {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			@include respond-above(lg) {
+				filter: grayscale(100%);
+			}
+			-webkit-transition: filter .3s linear;
+			   -moz-transition: filter .3s linear;
+			    -ms-transition: filter .3s linear;
+			     -o-transition: filter .3s linear;
+			        transition: filter .3s linear;
+			img, source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		position: relative;
+		&:after {
+			width: 195px;
+			height: 10px;
+			background-color: $orange;
+			display: block;
+			content: "";
+			position: absolute;
+			bottom: 20px;
+			right: 0;
+			-webkit-transition: right .3s linear;
+			   -moz-transition: right .3s linear;
+			    -ms-transition: right .3s linear;
+			     -o-transition: right .3s linear;
+			        transition: right .3s linear;
+			@include respond-below(md) {
+				width: 75px;
+				right: -15px;
+			}
+		}
+		&:hover {
+			@include respond-above(lg) {
+				&:after {
+					right: 100px;
+				}
+				picture {
+					filter: grayscale(0%);
+				}
+			}
+		}
+	}
+	.photo-item__content {
+		flex: 1 1 auto;
+		max-width: calc(100% - 490px);
+		width: auto;
+		height: 100%;
+		@include respond-below(lg) {
+			max-width: calc(100% - 360px);
+		}
+		display: flex;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: stretch;
+		        align-items: stretch;
+		p {
+			color: $dark-gray;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		.photo-item__title {
+			font-weight: 500;
+			color: $dark-gray;
+			font-size: 30px;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			@include respond-below(md) {
+				font-size: 24px;
+				margin-bottom: 45px;
+			}
+		}
+		@include respond-below(md) {
+			margin-bottom: 45px;
+			max-width: 100%;
+		}
+	}
+	&._right {
+		-webkit-flex-direction: row-reverse;
+		    -ms-flex-direction: row-reverse;
+		        flex-direction: row-reverse;
+	    @include respond-below(md) {
+	    	-webkit-flex-direction: column-reverse;
+	    	    -ms-flex-direction: column-reverse;
+	    	        flex-direction: column-reverse;
+	    }
+		.photo-item__image {
+			padding-left: 130px;
+			@include respond-below(lg) {
+				padding-left: 30px;
+			}
+			@include respond-below(md) {
+				padding-left: 0;
+			}
+			padding-right: 0;
+			&:after {
+				left: 0;
+				-webkit-transition: left .3s linear;
+				   -moz-transition: left .3s linear;
+				    -ms-transition: left .3s linear;
+				     -o-transition: left .3s linear;
+				        transition: left .3s linear;
+				@include respond-below(md) {
+					left: -15px;
+				}
+			}
+			&:hover {
+				@include respond-above(lg) {
+					&:after {
+						left: 100px;
+					}
+				}
+			}	
+		}
+	}
+	.photo-item__buttons {
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		width: 524px;
+		height: 50px;
+		display: flex;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-justify-content: flex-start;
+		        justify-content: flex-start;
+		-webkit-align-items: stretch;
+		        align-items: stretch;
+		@include respond-below(md) {
+			bottom: -150px;
+			width: 100%;
+			height: 100px;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+		.photo-item__buttons--amount {
+			width: 50%;
+			flex: 0 0 50%;
+			height: 100%;
+			@include respond-below(md) {
+				width: 100%;
+				height: 50%;
+			}
+			background-color: #f0f0f0;
+			font-weight: 500;
+			color: $dark-gray;
+			font-size: 24px;
+			display: flex;
+			-webkit-flex-direction: row;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-align-items: center;
+			        align-items: center;
+		}
+		.photo-item__buttons--payment {
+			width: 50%;
+			flex: 0 0 50%;
+			@include respond-below(md) {
+				width: 100%;
+				height: 50%;
+			}
+			height: 100%;
+			background-color: $orange;
+			font-weight: 500;
+			color: #fff;
+			font-size: 24px;
+			display: flex;
+			-webkit-flex-direction: row;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-align-items: center;
+			        align-items: center;
+		}
+	}
+}

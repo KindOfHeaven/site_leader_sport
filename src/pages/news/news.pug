@@ -1,0 +1,46 @@
+extends ../layout.pug
+include ../../components/contentElements/contentElements.pug
+include ../../components/input/input.pug
+include ../../components/button/button.pug
+include ../../components/agree/agree.pug
+
+block content
+	section.news-page
+		.container
+			h1.title Новости
+			+contentElements(
+				[
+					{
+						'title': 'Режим работы клуба в ногодние праздники',
+						'image': './assets/images/content/new1',
+						'content': '<p>Уважаемые клиенты! Режим работы клуба в праздничные дни:</p><ul><li>29 декабря 7:00 - 24:00</li><li>30 декабря 9:00 - 22:00</li><li>31 декабря 9:00 - 18:00</li><li>1 января - выходной</li><li>2 января 15:00 - 22:00</li><li>3 - 8 января 9:00 - 22:00</li></ul><p>Обратите внимание на изменения в сетке расписания секций.</p>'
+					},
+					{
+						'title': 'Ремонт лестницы',
+						'image': './assets/images/content/new2',
+						'content': '<p>Уважаемые клиенты, 1-2 декабря будет производиться ремонт лестницы, ведущей в ТРК Гранд Каньон со стороны Бизнес Центра.<br>Проход в ТРК и Лидер Спорт, будет осуществляться через запасную лестницу, ведущую в Дивный Город.<br> Следуйте табличкам-указателям.<br> Приносим извинения за временные неудобства.</p>'
+					},
+					{
+						'title': 'Поздравляем вас с наступающим Днем Народного Единства!',
+						'image': './assets/images/content/new3',
+						'content': '<p>Уважаемые клиенты!</p><p>Обратите внимание!<br>3-4-5 ноября фитнес клуб работает по расписанию выходного дня c 9:00 до 22:00.</p>'
+					},
+					{
+						'title': 'Первый месяц тренировок позади!',
+						'image': './assets/images/content/new4',
+						'content': '<p>Спешим поделиться успехами малышей секции Кэмпоkids!<br> Тренировки проходили в игровой манере, ребята развивали внимательность и дисциплину, стали гораздо более собранными, изучили 2 удержания, трое ребят сели на шпагат, улучшили координацию и повысили свою общую физическую подготовку.<br>Подробный фотоотчет и информация о секции смотри <a href="javascript:void(0)">здесь.</a></p>'
+					}
+				]
+			)
+		.news-form
+			.form-section__form
+				p.form-section__form--title
+					| Запишись
+					span на бесплатный
+					| Гостевой визит
+				form
+					+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
+					+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+					+input({'text': 'E-mail', 'id': 'email', 'name': 'email', 'required': false, 'type': 'email', 'className': 'email-input'})
+					+agree({'id': 'agreement', 'name': 'agreement'})
+					+button({'id': 'formSectionButton', 'text': 'Записаться'})

@@ -1,0 +1,64 @@
+.footer__social {
+	height: 21px;
+	ul {
+		height: 100%;
+		display: flex;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		    -webkit-justify-content: flex-end;
+		            justify-content: flex-end;
+		    -webkit-align-items: center;
+		            align-items: center;
+		 @media (max-width: 900px) {
+		 	-webkit-justify-content: center;
+		 	        justify-content: center;
+		 }
+		.footer__social--item {
+			height: 100%;
+			width: auto;
+			&:hover {
+				.footer__social--link {
+					color: $orange;
+				}
+			}
+			& + .footer__social--item {
+				margin-left: 15px;
+			}
+			.footer__social--link {
+				display: block;
+				height: 100%;
+				width: auto;
+				color: #fff;
+				-webkit-transition: color .3s linear;
+				   -moz-transition: color .3s linear;
+				    -ms-transition: color .3s linear;
+				     -o-transition: color .3s linear;
+				        transition: color .3s linear;
+				.icon {
+					height: 100%;
+					&.vk {
+						width: 30px;
+						height: 18px;
+					}
+					&.facebook {
+						width: 10px;
+						height: 19px;
+					}
+					&.instagram {
+						width: 21px;
+						height: 21px;
+					}
+					&.google_play {
+						width: 17px;
+						height: 20px;
+					}
+					&.appstore {
+						width: 21px;
+						height: 21px;
+					}
+				}
+			}
+		}
+	}
+}

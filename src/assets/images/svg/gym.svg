@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="154px" height="100px" viewBox="0 0 154 100" enable-background="new 0 0 154 100" xml:space="preserve">
+<g>
+	<g>
+		<path fill="none" stroke="#F54C28" stroke-width="3.8955" stroke-linecap="round" stroke-miterlimit="10" d="M119,98h-19
+			c-1.105,0-2-0.895-2-2V4c0-1.105,0.895-2,2-2h19c1.105,0,2,0.895,2,2v92C121,97.105,120.105,98,119,98z"/>
+		<path fill="none" stroke="#F54C28" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" d="M137.99,84H122.51
+			c-0.834,0-1.51-0.676-1.51-1.51V17.51c0-0.834,0.676-1.51,1.51-1.51h15.481c0.834,0,1.51,0.676,1.51,1.51V82.49
+			C139.5,83.324,138.824,84,137.99,84z"/>
+		<path fill="none" stroke="#F54C28" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" d="M151.369,60h-9.737
+			c-0.349,0-0.631-0.283-0.631-0.631V40.631c0-0.349,0.283-0.631,0.631-0.631h9.737c0.349,0,0.631,0.283,0.631,0.631v18.737
+			C152,59.717,151.717,60,151.369,60z"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#F54C28" stroke-width="3.8955" stroke-linecap="round" stroke-miterlimit="10" d="M35,98h19
+			c1.105,0,2-0.895,2-2V4c0-1.105-0.895-2-2-2H35c-1.105,0-2,0.895-2,2v92C33,97.105,33.895,98,35,98z"/>
+		<path fill="none" stroke="#F54C28" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" d="M16.01,84H31.49
+			c0.834,0,1.51-0.676,1.51-1.51V17.51c0-0.834-0.676-1.51-1.51-1.51H16.01c-0.834,0-1.51,0.676-1.51,1.51V82.49
+			C14.5,83.324,15.176,84,16.01,84z"/>
+		<path fill="none" stroke="#F54C28" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" d="M2.631,60h9.737
+			C12.717,60,13,59.717,13,59.369V40.631C13,40.283,12.717,40,12.369,40H2.631C2.283,40,2,40.283,2,40.631v18.737
+			C2,59.717,2.283,60,2.631,60z"/>
+	</g>
+	
+		<line fill="none" stroke="#F54C28" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" x1="56" y1="41" x2="98" y2="41"/>
+	
+		<line fill="none" stroke="#F54C28" stroke-width="4" stroke-linecap="round" stroke-miterlimit="10" x1="56" y1="60" x2="98" y2="60"/>
+</g>
+</svg>

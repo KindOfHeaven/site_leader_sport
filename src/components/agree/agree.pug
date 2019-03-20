@@ -1,0 +1,5 @@
+mixin agree(input)
+	label.checkbox(for=input.id)
+		input(type="checkbox" id=input.id name=input.name)
+		span.checkbox__mark
+		| Я даю <a href="javascript:void(0)"> согласие </a> на обработку персональных данных

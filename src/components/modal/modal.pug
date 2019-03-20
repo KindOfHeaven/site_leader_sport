@@ -1,0 +1,6 @@
+mixin modal(modal)
+	.modal__wrapper
+		.modal(class=modal.className id=modal.id)
+			block
+			.modal__closer
+				+icon('exit')

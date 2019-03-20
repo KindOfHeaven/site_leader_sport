@@ -1,0 +1,18 @@
+mixin serviceHead(service)
+	include ../button/button.pug
+	.service-head
+		.service-head__inner
+			.service-head__image
+				picture
+					source(srcset=service.image+'.webp' type="image/webp")
+					source(srcset=service.image+'.jpg' type="image/jpeg")
+					img(src=service.image+'.jpg' alt=service.text)
+			.service-head__content
+				if service.withTitle
+					p.service-head__content--title #{service.title}
+				p.service-head__content--text(class=service.textClass) !{service.text}
+				+button({
+					'id': service.buttonId,
+					'text': service.buttonText || 'Все фото зала',
+					'className': '_colored ' + service.className
+				})

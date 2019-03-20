@@ -1,0 +1,93 @@
+extends ../layout.pug
+
+block content
+	include ../../components/button/button.pug
+	include ../../components/icon/icon.pug
+	include ../../components/modal/modal.pug
+	include ../../components/agree/agree.pug
+	include ../../components/input/input.pug
+	.single-subscription
+		.container
+			h1.title АБОНЕМЕНТЫ
+			.single-sub__info
+				.single-sub__info--preview
+					.single-sub__preview--head
+						.single-sub__preview--number 01
+						.single-sub__preview--title ЗОЛОТАЯ КАРТА
+					.single-sub__preview--body
+						p.singe-sub__preview--text Безлимитное посещение + 3 персональные тренировки + дополнительный ящик для хранения личных вещей в клубе.
+				.single-sub__info--buttons
+					a.single-sub__info--next(href="http://kindofheaven.ru/leader/subscription2.html") Следующий абонемент
+					+button({
+						'id': 'subModal__open',
+						'className': 'modal__open _colored',
+						'text': 'Узнать цену'
+					})
+		.single-sub__abilities
+			.container
+				.single-sub__subtitle Возможности абонемента
+				ul.single-sub__list
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('date')
+						p.single-sub__list--text посещение клуба с 7.00 до 24.00 в будние дни, с 9.00 до 22.00 в выходные и праздничные дни
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('gym')
+						p.single-sub__list--text посещение тренажерного зала площадью 1300 м2. В вашем распоряжении все необходимые тренажеры известных брендов: Life Fitness, Precor, Hammer Strength, Technogym, TuffStuff
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('many')
+						p.single-sub__list--text посещение групповых тренировок в любом из 5 специально оборудованных залов по сетке расписания, (более 140 тренировок в неделю)
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('ring')
+						p.single-sub__list--text групповые занятия по боевым искусствам в 5 специализированных залах с профессиональными инструкторами
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('sauna')
+						p.single-sub__list--text финская сауна (в мужской и женской раздевалке), инфракрасная сауна (в женской раздевалке), ушат с холодной водой
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('trainer')
+						p.single-sub__list--text 3 персональных тренировки в тренажерном зале
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('cardio')
+						p.single-sub__list--text ритмокардиография (вариабельность ритма сердца)
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('towel')
+						p.single-sub__list--text бесплатное полотенце
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('locker')
+						p.single-sub__list--text ящик для хранение спортивного инвентаря
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('children')
+						p.single-sub__list--text бесплатная детская комната
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('ice-rink')
+						p.single-sub__list--text посещение катка «Гранд Каньон Айс» по расписанию с 18 лет
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('water')
+						p.single-sub__list--text очищенная и охлажденная питьевая вода
+			.man__img
+				picture
+					source(srcset="./assets/images/template/man.webp" type="image/type")
+					source(srcset="./assets/images/template/man.png" type="image/png")
+					img(src="./assets/images/template/man.png" alt="man")
+	+modal({
+		'id': 'subModal',
+		'className': 'sub-modal'
+	})
+		p.sub-modal--title ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ
+		form#subForm
+			.form__inputs
+				+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
+				+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+			+agree({'id': 'agreement', 'name': 'agreement'})
+			+button({'id': 'formSectionButton', 'text': 'Записаться'})

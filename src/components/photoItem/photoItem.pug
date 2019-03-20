@@ -1,0 +1,10 @@
+mixin photoItem(item)
+	.photo-item(class=item.right)
+		.photo-item__image
+			picture
+				source(srcset=item.image+'.webp' type="image/webp")
+				source(srcset=item.image+'.jpg' type="image/jpeg")
+				img(src=item.image+'.jpg' alt="Photo item"
+				)
+		.photo-item__content !{item.text}
+		block

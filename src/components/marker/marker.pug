@@ -1,0 +1,6 @@
+mixin marker(marker)
+	include ../icon/icon.pug
+	a.marker(href=marker.href)
+		span.marker__icon
+			+icon(marker.icon)
+		| #{marker.text}

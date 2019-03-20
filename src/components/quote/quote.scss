@@ -1,0 +1,56 @@
+.quote {
+	position: relative;
+	display: block;
+	padding: 30px 150px 30px 80px;
+	background: $orange;
+	.quote--text {
+		font-family: "Deja Vu Sans";
+		font-weight: 700;
+		color: #ffffff;
+		font-size: 30px;
+		line-height: 45px;
+	}
+	@include respond-below(md) {
+		padding: 30px 15px;		
+		.quote--text {
+			font-size: 21px;
+			line-height: 31px;
+		}
+	}
+	&:after {
+		content: '“';
+		display: block;
+		font-family: "Deja Vu Sans";
+		font-weight: 700;
+		color: $dark-gray;
+		font-size: 100px;
+		position: absolute;
+		left: 30px;
+		top: -25px;
+		height: 30px;
+		line-height: 1;
+		@include respond-below(md) {
+			left: 5px;
+		}
+	}
+	&:before {
+		content: '”';
+		display: block;
+		font-family: "Deja Vu Sans";
+		font-weight: 700;
+		color: $dark-gray;
+		font-size: 100px;
+		position: absolute;
+		right: 50px;
+		bottom: -3px;
+		height: 30px;
+		line-height: 1;
+		@include respond-below(lg) {
+			right: 30px;
+			left: auto;
+		}
+		@include respond-below(md) {
+			right: 8px;
+		}
+	}
+}

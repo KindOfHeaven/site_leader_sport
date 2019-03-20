@@ -1,1 +1,61 @@
 mixin footer()
+	include ../icon/icon.pug
+	include ../preloader/preloader.pug
+	include ../footerNav/footerNav.pug
+	include ../footerSocial/footerSocial.pug
+	include ../footerDocs/footerDocs.pug
+	footer.footer
+		.container
+			.footer__line
+				.footer__block.footer__logo
+					a(href="https://kindofheaven.ru/leader/stock.html")
+						+icon('logo')
+				nav.footer__block.footer__nav
+					+footerNav(
+						[
+							{'text': 'Акции', 'href':'http://kindofheaven.ru/leader/stock.html'},
+							{'text': 'Расписание', 'href':'javascript:void(0)'},
+							{'text': 'Услуги', 'href':'http://kindofheaven.ru/leader/gym.html'},
+							{'text': 'Абонементы', 'href':'http://kindofheaven.ru/leader/subscriptions.html'},
+							{'text': 'Детям', 'href':'http://kindofheaven.ru/leader/dsa.html'},
+							{'text': 'Галерея', 'href':'javascript:void(0)'},
+							{'text': 'Команда', 'href':'javascript:void(0)'},
+							{'text': 'Информация', 'href':'javascript:void(0)'},
+							{'text': 'Контакты', 'href':'javascript:void(0)'}
+						]
+					)
+				.footer__block.footer__social
+					+footerSocial(
+						[
+							{
+								'icon': 'vk', 'href': 'javascript:void(0)'
+							},
+							{
+								'icon': 'facebook', 'href': 'javascript:void(0)'
+							},
+							{
+								'icon': 'instagram', 'href': 'javascript:void(0)'
+							},
+							{
+								'icon': 'google_play', 'href': 'javascript:void(0)'
+							},
+							{
+								'icon': 'appstore', 'href': 'javascript:void(0)'
+							}
+						]
+					)
+			.footer__line
+				.footer__block.footer__rating
+					p.footer__rating--text Рейтинг 5.0 на основе отзывов 340 клиентов
+				.footer__block.footer__docs
+					+footerDocs(
+						[
+							{'text': 'Правила клуба', 'href':'javascript:void(0)'},
+							{'text': 'Документы', 'href':'javascript:void(0)'},
+							{'text': 'Политика конфиденциальности', 'href':'javascript:void(0)'}
+						]
+					)
+				.footer__block.footer__copyright
+					p.footer__copyright--text ©  Лидер Спорт, 2019
+	+preloader()
+	script(src="./js/main.js")

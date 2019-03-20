@@ -1,0 +1,74 @@
+extends ../layout.pug
+
+block content
+	include ../../components/photoItem/photoItem.pug
+	include ../../components/icon/icon.pug
+	include ../../components/list/list.pug
+	.dsa-page
+		.container
+			h1.title ДЕТСКАЯ СПОРТИВНАЯ АКАДЕМИЯ (ДСА)
+			.dsa-items
+				+photoItem({
+					'text': '<p>В нашем клубе создана комната для детей «Лидерландия», где вы можете оставить ребенка во время посещения нашего клуба. Теперь вы не будете беспокоиться о том, чем занять вашего малыша пока вы тренируетесь. Мы берём это на себя! В то время пока вы занимаетесь, ваш ребенок будет находиться в компании сверстников и нашего сотрудника, который присмотрит за порядком.</p>',
+					'image': './assets/images/content/dsa',
+					'right': '_right'
+				})
+			.dsa-sections
+				.dsa-subtitle НАПРАВЛЕНИЯ
+				ul.dsa-sections__list
+					li.dsa-sections__list--item
+						span
+							+icon('ring')
+						p.dsa-sections__list--text единоборства (дзюдо, самбо, ушу, айкидо, бокс и т.д.)
+					li.dsa-sections__list--item
+						span
+							+icon('gym')
+						p.dsa-sections__list--text функциональный  тренинг (ОФП)
+					li.dsa-sections__list--item
+						span
+							+icon('gymnastic')
+						p.dsa-sections__list--text художественная гимнастика
+					li.dsa-sections__list--item
+						span
+							+icon('hammock')
+						p.dsa-sections__list--text фитнес в подвесных гамаках (антигравити)
+					li.dsa-sections__list--item
+						span
+							+icon('dance')
+						p.dsa-sections__list--text танцы (хореография для детей и подростков, современный танец, BreakDance)
+					li.dsa-sections__list--item
+						span
+							+icon('hockey')
+						p.dsa-sections__list--text хоккей
+			.dsa-codex
+				.dsa-subtitle КОДЕКС ВОСПИТАННИКА ДСА
+				.dsa-codex__content
+					.dsa-codex__list
+						+list([
+							'вежливость',
+							'благородство',
+							'смелость',
+							'мужество',
+							'сила и честь',
+							'трудолюбие',
+							'скромность',
+							'почтение к родителям и тренеру',
+							'уважение к флагу и гимну России'
+						])
+						a.dsa__link(href="javsacript:void(0)") Расписание тренировок
+					.dsa-codex__oath
+						.dsa-codex__oath--title Клятва секции единоборств
+						p.dsa-codex__oath--text «Я, воспитанник Детской Спортивной Академии, клянусь!<br>Чтить и соблюдать кодекс ДСА и традиции боевых искусств. Применять боевые приемы только для защиты и обороны, добиваться высоких результатов в учебе и спорте, быть верным дружбе, защищать слабых, быть достойным воспитанником ДСА и гражданином России. Клянусь! Клянусь! Клянусь!»
+			.dsa-partners
+				.title ПАРТНЕРЫ ДЕТСКОЙ СПОРТИВНОЙ АКАДЕМИИ
+				.dsa-partners__list
+					.dsa-partners__item
+						.dsa-partners__item--name
+							+icon('hockey')
+							| Хоккейный клуб «Гранд Каньон»
+						a.dsa__link(href="javsacript:void(0)") Перейти на сайт клуба
+					.dsa-partners__item
+						.dsa-partners__item--name
+							+icon('ice-rink')
+							| Школа фигурного катания «Династия»
+						a.dsa__link(href="javsacript:void(0)") Перейти на сайт клуба

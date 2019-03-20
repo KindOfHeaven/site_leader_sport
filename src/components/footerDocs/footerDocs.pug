@@ -1,0 +1,5 @@
+mixin footerDocs(docs)
+	ul.footer__docs--list
+		each item in docs
+			li.footer__docs--list--item
+				a.footer__docs--list--link(href=item.href) #{item.text}

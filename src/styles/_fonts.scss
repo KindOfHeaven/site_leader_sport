@@ -1,6 +1,41 @@
-// @font-face {
-//   font-family: "Source Sans Pro";
-//   src: url('../fonts/SourceSansPro-Light.woff') format('woff');
-//   font-weight: 300;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "Fira Sans Condensed";
+  src: url('../assets/fonts/FiraSansCondensed-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans Condensed";
+  src: url('../assets/fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans Condensed";
+  src: url('../assets/fonts/FiraSansCondensed-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Sans Condensed";
+  src: url('../assets/fonts/FiraSansCondensed-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: "Deja Vu Sans";
+    src: url('../assets/fonts/DejaVuSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Deja Vu Sans Condensed';
+    src: local('DejaVu Sans Bold Condensed'), local('DejaVuSans-Bold Condensed'), url('../assets/fonts/dejavusanscondensedbold.woff2') format('woff2'), url('../assets/fonts/dejavusanscondensedbold.woff') format('woff'), url('../assets/fonts/dejavusanscondensedbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

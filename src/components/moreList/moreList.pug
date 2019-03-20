@@ -1,0 +1,7 @@
+mixin moreList(list)
+	.more-list
+		ul
+			each item in list
+				li.more-list__item
+					span.more-list__item--mark
+					| #{item.text}

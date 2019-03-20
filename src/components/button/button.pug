@@ -1,0 +1,5 @@
+mixin button(button)
+	if button.link
+		a.button(href=button.link id=button.id class=button.className) #{button.text}
+	else
+		button.button(type="button" id=button.id class=button.className) #{button.text}

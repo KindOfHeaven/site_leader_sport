@@ -1,0 +1,23 @@
+mixin serviceLine(items)
+	include ../icon/icon.pug
+	include ../quote/quote.pug
+	.service-line
+		each item in items
+			if item.type == 'item'
+				.service-line__item
+					.service-line__item--head
+						if item.icon
+							span.service-line__item--icon
+								+icon(item.icon)
+						else if item.number
+							span.service-line__item--number #{item.number}
+						p.service-line__item--title #{item.title}
+					.service-line__item--body
+						p.service-line__item--text !{item.text}
+						if item.link
+							a.service-line__item--link(class=item.link.className href=item.link.href id=item.link.id) #{item.link.text}
+			else if item.type == 'quote'
+				.service-line__quote(class=item.className)
+					+quote(item.text)
+
+			

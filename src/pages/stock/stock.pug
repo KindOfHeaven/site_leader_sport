@@ -1,0 +1,43 @@
+extends ../layout.pug
+include ../../components/contentElements/contentElements.pug
+include ../../components/input/input.pug
+include ../../components/button/button.pug
+include ../../components/agree/agree.pug
+
+block content
+	section.stock-page
+		.container
+			h1.title Акции
+			+contentElements(
+				[
+					{
+						'title': 'Неделя безлимитного фитнеса + 1 персональная тренировка ВСЕГО ЗА 1200 РУБ.',
+						'image': './assets/images/content/stock1',
+						'content': '<p>Приходите, смотрите, пробуйте - у вас есть прекрасная возможность убедиться в том, что качественный фитнес может быть доступным!</p><p>Срок действия акции ограничен.<br><span>Только для новых клиентов.</span> Ждём Вас в Лидер Спорт!</p>'
+					},{
+						'title': 'Неделя безлимитного фитнеса + 1 персональная тренировка ВСЕГО ЗА 1200 РУБ.',
+						'image': './assets/images/content/stock2',
+						'content': '<p>Приходите, смотрите, пробуйте - у вас есть прекрасная возможность убедиться в том, что качественный фитнес может быть доступным!</p><p>Срок действия акции ограничен.<br><span>Только для новых клиентов.</span> Ждём Вас в Лидер Спорт!</p>'
+					},{
+						'title': 'Неделя безлимитного фитнеса + 1 персональная тренировка ВСЕГО ЗА 1200 РУБ.',
+						'image': './assets/images/content/stock3',
+						'content': '<p>Приходите, смотрите, пробуйте - у вас есть прекрасная возможность убедиться в том, что качественный фитнес может быть доступным!</p><p>Срок действия акции ограничен.<br><span>Только для новых клиентов.</span> Ждём Вас в Лидер Спорт!</p>'
+					},{
+						'title': 'Неделя безлимитного фитнеса + 1 персональная тренировка ВСЕГО ЗА 1200 РУБ.',
+						'image': './assets/images/content/stock4',
+						'content': '<p>Приходите, смотрите, пробуйте - у вас есть прекрасная возможность убедиться в том, что качественный фитнес может быть доступным!</p><p>Срок действия акции ограничен.<br><span>Только для новых клиентов.</span> Ждём Вас в Лидер Спорт!</p>'
+					},
+				]
+			)
+		.stock-form
+			.form-section__form
+				p.form-section__form--title
+					| Запишись
+					span на бесплатный
+					| Гостевой визит
+				form
+					+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
+					+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+					+input({'text': 'E-mail', 'id': 'email', 'name': 'email', 'required': false, 'type': 'email', 'className': 'email-input'})
+					+agree({'id': 'agreement', 'name': 'agreement'})
+					+button({'id': 'formSectionButton', 'text': 'Записаться'})

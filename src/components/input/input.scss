@@ -1,0 +1,32 @@
+.input {
+	font-weight: 400;
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 38px;
+	input {
+		display: block;
+		width: 262px;
+		-webkit-border-radius: 0;
+		        border-radius: 0;
+		height: 50px;
+		background-color: #ffffff;
+		border: none;
+		outline: none;
+		padding-left: 20px;
+		color: $dark-gray;
+		font-size: 18px;
+		-webkit-transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
+		   -moz-transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
+		    -ms-transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
+		     -o-transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
+		        transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
+		&:hover, &:focus {
+			box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.19);
+		}
+		&:active {
+			outline: none;
+			box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.19), inset 1px 1px 2px 1px rgba(0, 0, 0, 0.35);
+			border: 1px solid rgba(34, 34, 34, 0.15);
+		}
+	}
+}

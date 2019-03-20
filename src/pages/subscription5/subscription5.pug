@@ -1,0 +1,47 @@
+extends ../layout.pug
+
+block content
+	include ../../components/button/button.pug
+	include ../../components/icon/icon.pug
+	.single-subscription
+		.container
+			h1.title АБОНЕМЕНТЫ
+			.single-sub__info
+				.single-sub__info--preview
+					.single-sub__preview--head
+						.single-sub__preview--number 05
+						.single-sub__preview--title СЕКЦИИ
+					.single-sub__preview--body
+						p.singe-sub__preview--text Посещение конкретного направления в фитнесе (различные виды единоборств, функциональный тренинг, йога в гамаках).
+				.single-sub__info--buttons
+					a.single-sub__info--next(href="http://kindofheaven.ru/leader/subscription6.html") Следующий абонемент
+					+button({
+						'id': 'subModal__open',
+						'className': 'modal__open _colored',
+						'text': 'Узнать цену'
+					})
+		.single-sub__abilities
+			.container
+				.single-sub__subtitle Возможности абонемента
+				ul.single-sub__list
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('date')
+						p.single-sub__list--text срок действия секции 30 дней
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('calendar_new')
+						p.single-sub__list--text возможность посещать выбранную секции в часы, предусмотренные сеткой расписания
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('children')
+						p.single-sub__list--text бесплатная детская комната
+					li.single-sub__list--item
+						span.single-sub__list--icon
+							+icon('water')
+						p.single-sub__list--text очищенная и охлажденная питьевая вода
+			.man__img
+				picture
+					source(srcset="./assets/images/template/man.webp" type="image/type")
+					source(srcset="./assets/images/template/man.png" type="image/png")
+					img(src="./assets/images/template/man.png" alt="man")
