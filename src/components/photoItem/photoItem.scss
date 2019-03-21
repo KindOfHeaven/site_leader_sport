@@ -75,7 +75,9 @@
 				right: -15px;
 			}
 		}
-		&:hover {
+	}
+	&:hover {
+		.photo-item__image {
 			@include respond-above(lg) {
 				&:after {
 					right: 100px;
@@ -85,7 +87,7 @@
 				}
 			}
 		}
-	}
+	}	
 	.photo-item__content {
 		flex: 1 1 auto;
 		max-width: calc(100% - 490px);
@@ -152,7 +154,9 @@
 					left: -15px;
 				}
 			}
-			&:hover {
+		}
+		&:hover {
+			.photo-item__image {
 				@include respond-above(lg) {
 					&:after {
 						left: 100px;

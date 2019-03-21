@@ -1,0 +1,55 @@
+extends ../layout.pug
+
+block content
+	include ../../components/icon/icon.pug
+	include ../../components/table/table.pug
+	.timetable-page
+		.container
+			h1.title РАСПИСАНИЕ ЗАНЯТИЙ ДСА «ЛИДЕР СПОРТ»
+			.timetable__dropdown
+				.timetable__dropdown--header#timetableDropdown Направление
+				nav.timetable__tabs#timetable__tabs
+					a.timetable__tab._active(href="javascript:void(0)" data-tab="fighting") ЕДИНОБОРСТВА
+					a.timetable__tab(href="javascript:void(0)" data-tab="choreography") ХОРЕОГРАФИЯ
+					a.timetable__tab(href="javascript:void(0)" data-tab="dancing") ТАНЦЕВАЛЬНЫЕ СТУДИИ
+					a.timetable__tab(href="javascript:void(0)" data-tab="functional") Функциональный тренинг
+					a.timetable__tab(href="javascript:void(0)" data-tab="fitness") ФИТНЕС В ГАМАКАХ
+					a.timetable__tab(href="javascript:void(0)" data-tab="gymnastics") ХУДОЖЕСТВЕННАЯ ГИМНАСТИКА
+		.timetable__wrapper#timetable__tables
+			.timetable__table._active(data-table="fighting")
+				.container
+					+table('fighting')
+			.timetable__table(data-table="choreography")
+				.container
+					+table('choreography')
+			.timetable__table(data-table="dancing")
+				.container
+					+table('dancing')
+			.timetable__table(data-table="functional")
+				.container
+					+table('functional')
+			.timetable__table(data-table="fitness")
+				.container
+					+table('fitness')
+			.timetable__table(data-table="gymnastics")
+				.container
+					+table('gymnastics')
+		.container
+			p.timetable__text Информация носит исключительно информационно-ознакомительный характер и не является публичной офертой. Ознакомиться с действующими ценами на услуги спортивного клуба «Лидер Спорт» (далее – Клуб) вы можете в прейскуранте, размещенном на рецепции Клуба.
+			ul.timetable__features
+				li.timetable__feature
+					span.timetable__feature--icon
+						+icon('sale')
+					p.timetable__feature--content Скидка 10% предоставляется ребенку, если его родитель является действующим членом клуба «Лидер Спорт», а также при одновременной оплате занятий в секциях на двоих (родные братья, сестры).
+				li.timetable__feature
+					span.timetable__feature--icon
+						+icon('sale')
+					p.timetable__feature--content Скидка 20% предоставляется ребенку из многодетной семьи. Скидки не суммируются.
+				li.timetable__feature
+					span.timetable__feature--icon
+						+icon('attention')
+					p.timetable__feature--content Занятия, пропущенные по личным причинам, в т.ч. по болезни, не компенсируются. 
+				li.timetable__feature
+					span.timetable__feature--icon
+						+icon('attention')
+					p.timetable__feature--content Во избежание травматизма, дети, пропустившие разминку (опоздание более 5минут) на занятие не допускаются, компенсация за пропущенное занятие не выплачивается.

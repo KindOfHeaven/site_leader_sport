@@ -1,0 +1,313 @@
+.timetable-page {
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+}
+.timetable__dropdown {
+	width: 100%;
+	height: auto;
+	.timetable__dropdown--header {
+		display: none;
+	}
+	@include respond-below(lg) {
+		height: 40px;
+		background: #FFF;
+		display: flex;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: center;
+		        align-items: center;
+		position: relative;
+		.timetable__dropdown--header {
+			position: relative;
+			z-index: 1;
+			text-align: center;
+			width: auto;
+			display: inline;
+			color: $dark-gray;
+			font-size: 18px;
+			text-transform: uppercase;
+			left: -12px;
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 5px;
+				right: -24px;
+				border-top: 7px solid $orange;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-bottom: 7px solid transparent;
+				-webkit-transition: transform .3s linear, border-color .3s linear;
+				   -moz-transition: transform .3s linear, border-color .3s linear;
+				    -ms-transition: transform .3s linear, border-color .3s linear;
+				     -o-transition: transform .3s linear, border-color .3s linear;
+				        transition: transform .3s linear, border-color .3s linear;
+			}
+		}
+		.timetable__tabs {
+			max-height: 0px;
+			position: absolute;
+			width: 100%;
+			overflow: hidden;
+			display: flex;
+			top: 100%;
+			left: 0;
+			background: #FFF;
+			box-shadow: 0 2px 5px rgba(0, 87, 146, 0.1);
+			height: auto;
+			padding: 0 25px;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-justify-content: flex-start;
+			        justify-content: flex-start;
+			-webkit-align-items: center;
+			        align-items: center;
+			-webkit-transition: max-height .5s linear;
+			   -moz-transition: max-height .5s linear;
+			    -ms-transition: max-height .5s linear;
+			     -o-transition: max-height .5s linear;
+			        transition: max-height .5s linear;
+			.timetable__tab {
+				display: block;
+				text-align: center;
+				width: 100%;
+				font-size: 18px;
+				line-height: 32px;
+				&:first-child {
+					margin-top: 30px;
+				}
+				&:last-child {
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&._opened {
+			.timetable__tabs {
+				max-height: 300px;
+			}
+			.timetable__dropdown--header:before {
+				-webkit-transform: rotate(180deg) translateY(7px);
+				   -moz-transform: rotate(180deg) translateY(7px);
+				    -ms-transform: rotate(180deg) translateY(7px);
+				     -o-transform: rotate(180deg) translateY(7px);
+				        transform: rotate(180deg) translateY(7px);
+			}
+		}
+	}
+}
+.timetable__tabs {
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: center;
+	        align-items: center;
+	.timetable__tab {
+		color: $dark-gray;
+		cursor: pointer;
+		font-size: 18px;
+		text-transform: uppercase;
+		-webkit-transition: color .3s linear;
+		   -moz-transition: color .3s linear;
+		    -ms-transition: color .3s linear;
+		     -o-transition: color .3s linear;
+		        transition: color .3s linear;
+		&:hover, &._active {
+			color: $orange;
+		}
+	}
+}
+
+.timetable__wrapper {
+	position: relative;
+	z-index: 1;
+	margin-top: 65px;
+	width: 100%;
+	overflow: hidden;
+	@include respond-below(md) {
+		margin-top: 30px;
+	}
+	max-width: 100%;
+		.timetable__table {
+			width: 100%;
+			height: auto;
+			.container {
+				position: static;
+				display: flex;
+				-webkit-flex-direction: row;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				-webkit-justify-content: space-between;
+				        justify-content: space-between;
+				-webkit-align-items: flex-start;
+				        align-items: flex-start;
+				-webkit-flex-wrap: wrap;
+				    -ms-flex-wrap: wrap;
+				        flex-wrap: wrap;
+				
+			}
+			display: none;
+			&._active {
+				display: flex;
+			}
+			.timetable__item {
+				flex: 0 0 calc((100% - 90px)/4);
+				width: calc((100% - 90px)/4);
+				max-width: calc((100% - 90px)/4);
+				&:nth-child(-n + 12) {
+					margin-bottom: 50px;
+				}
+				left: 0;
+				position: relative;
+				@include respond-below(lg) {
+					flex: 0 0 calc((100% - 60px)/3);
+					width: calc((100% - 60px)/3);
+					max-width: calc((100% - 60px)/3);
+					&:nth-child(-n + 15) {
+						margin-bottom: 40px;
+					}
+				}
+				@include respond-below(md) {
+					flex: 0 0 calc((100% - 30px)/2);
+					width: calc((100% - 30px)/2);
+					max-width: calc((100% - 30px)/2);
+					margin-bottom: 0 !important;
+					&:nth-child(-n + 14) {
+						margin-bottom: 40px !important;
+					}
+				}
+				@include respond-below(sm) {
+					flex: 0 0 100%;
+					width: 100%;
+					max-width: 100%;
+					&:not(:last-child) {
+						margin-bottom: 30px !important;
+					}
+				}
+			}
+			&._hidding {
+				.timetable__item {
+					@for $i from 0 through 16 {
+						&:nth-child(#{$i}) {
+							-webkit-transition: left .3s linear ($i + 1)/10*1s;
+							   -moz-transition: left .3s linear ($i + 1)/10*1s;
+							    -ms-transition: left .3s linear ($i + 1)/10*1s;
+							     -o-transition: left .3s linear ($i + 1)/10*1s;
+							        transition: left .3s linear ($i + 1)/10*1s;
+						}
+					}
+					left: -125%;
+				}
+			}
+			&._waiting {
+				position: absolute;
+				top: 0;
+				left: 0;
+				.timetable__item {
+					right: -125%;
+					left: auto;
+				}
+			}
+			&._showing {
+				.timetable__item {
+					@for $i from 0 through 16 {
+						&:nth-child(#{$i}) {
+							-webkit-transition: right .3s linear ($i + 1)/10*1s;
+							   -moz-transition: right .3s linear ($i + 1)/10*1s;
+							    -ms-transition: right .3s linear ($i + 1)/10*1s;
+							     -o-transition: right .3s linear ($i + 1)/10*1s;
+							        transition: right .3s linear ($i + 1)/10*1s;
+						}
+					}
+					right: 0;
+				}
+			}
+	}
+}
+.timetable__text {
+	margin: 25px 0 45px 0;
+	color: $dark-gray;
+	font-size: 12px;
+	line-height: 20px;
+	@include respond-below(sm) {
+		margin: 30px 0 45px 0;
+	}
+}
+
+.timetable__features {
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
+	    -webkit-flex-wrap: wrap;
+	        -ms-flex-wrap: wrap;
+	            flex-wrap: wrap;
+	margin-bottom: 100px;
+	.timetable__feature {
+		&:nth-child(1), &:nth-child(2) {
+			margin-bottom: 45px;
+		}
+		display: flex;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-justify-content: flex-start;
+		        justify-content: flex-start;
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
+		width: calc((100% - 80px)/2);
+		max-width: calc((100% - 80px)/2);
+		flex: 0 0 calc((100% - 80px)/2);
+		.timetable__feature--icon {
+			flex: 0 0 40px;
+			height: 40px;
+			margin-right: 40px;
+			width: 40px;
+			color: transparent;
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.timetable__feature--content {
+			color: $dark-gray;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		@include respond-below(md) {
+			&:not(:last-child) {
+				margin-bottom: 45px;
+			}
+			display: flex;
+			flex: 0 0 100%;
+			width: 100%;
+			max-width: 100%;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			-webkit-justify-content: flex-start;
+			        justify-content: flex-start;
+			-webkit-align-items: center;
+			        align-items: center;
+			.timetable__feature--icon {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+			.timetable__feature--content {
+				text-align: center;
+			}
+		}
+	}
+}
