@@ -21,11 +21,11 @@ jQuery(document).ready(function() {
 			nextTable.addClass('_showing');
 			timetableTabs.find(`.timetable__tab._active`).removeClass('_active');
 			timetableTabs.find(`.timetable__tab[data-tab="${name}"]`).addClass('_active');
-		}, 1000);
+		}, 500);
 		setTimeout(function() {
 			activeTable.removeClass('_hidding').removeClass('_active');
 			nextTable.removeClass('_waiting _showing');
-		}, 2000) 
+		}, 1250) 
 	})
 	
 

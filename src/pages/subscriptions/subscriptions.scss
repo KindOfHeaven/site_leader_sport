@@ -11,7 +11,7 @@
 	.subscriptions__mobile-order {
 		display: none;
 	}
-	@include respond-below(lg) {
+	@media (max-width: 900px) {
 		& > .service-line {
 			display: none;
 		}

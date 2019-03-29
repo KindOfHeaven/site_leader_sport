@@ -1,0 +1,9 @@
+mixin team(index, people, className)
+	.team-section(class=className data-index=index)
+		each person in people
+			a.team-section__person.modal__open(id=person.modalId+'Modal__open')
+				picture
+					source(srcset=person.image+'.webp' type="image/webp")
+					source(srcset=person.image+'.png' type="image/png")
+					img(src=person.image+'.png' alt=person.name)
+				span.team-section__person--name #{person.name}

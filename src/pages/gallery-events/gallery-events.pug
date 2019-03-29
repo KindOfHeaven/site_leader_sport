@@ -1,0 +1,65 @@
+extends ../layout.pug
+
+block content
+	include ../../components/galleryEvents/galleryEvents.pug
+	.gallery-page
+		.container
+			h1.title Галерея
+			.gallery__dropdown
+				.gallery__dropdown--header#galleryDropdown Мероприятия
+				nav.gallery__tabs
+					a.gallery__tab._active(href="http://kindofheaven.ru/leader/gallery.html" data-tab="fighting") КЛУБ
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="choreography") Тренажерный зал
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="dancing") Групповые занятия
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="functional") Единоборства
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="gymnastics") Функциональный тренинг
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="gymnastics") Йога в гамаках
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="gymnastics") Детская комната
+					a.gallery__tab._last(href="javascript:void(0)" data-tab="fitness") Мероприятия
+			+galleryEvents([
+				{
+					'name': 'Кубок «Гранд Каньон» <br>20.08.2018',
+					'image': 'assets/images/content/gallery/preview1',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Break Dance Buttle 2018',
+					'image': 'assets/images/content/gallery/preview2',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Показательные выступления<br> по айкидо Ёсинкан',
+					'image': 'assets/images/content/gallery/preview3',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Кубок «Гранд Каньон» <br>20.08.2018',
+					'image': 'assets/images/content/gallery/preview1',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Break Dance Buttle 2018',
+					'image': 'assets/images/content/gallery/preview2',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Показательные выступления<br> по айкидо Ёсинкан',
+					'image': 'assets/images/content/gallery/preview3',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Кубок «Гранд Каньон» <br>20.08.2018',
+					'image': 'assets/images/content/gallery/preview1',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Break Dance Buttle 2018',
+					'image': 'assets/images/content/gallery/preview2',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+				{
+					'name': 'Показательные выступления<br> по айкидо Ёсинкан',
+					'image': 'assets/images/content/gallery/preview3',
+					'href': 'http://kindofheaven.ru/leader/gallery-single.html'
+				},
+			])

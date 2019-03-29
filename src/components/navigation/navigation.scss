@@ -229,6 +229,7 @@
 	}
 	@media (max-width: 870px) {
 		padding: 0 57px 0 15px;
+	}
 		&._full-screen {
 			position: fixed;
 			left: 0;
@@ -275,7 +276,10 @@
 							&:before {
 								content: "";
 								position: absolute;
-								top: 15px;
+								top: 12px;
+								@include respond-below(sm) {
+									top: 15px;
+								}
 								right: -24px;
 								border-top: 10px solid #fff;
 								border-left: 8.5px solid transparent;
@@ -357,5 +361,4 @@
 				}
 			}
 		}
-	}
 }

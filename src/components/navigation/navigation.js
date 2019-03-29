@@ -22,7 +22,10 @@ jQuery(window).resize(function() {
 	resized = true;
 
 	deviceWidth = iOS ? screen.width : jQuery(document).outerWidth();
-
+	const nav = jQuery('#nav');
+	if (nav.hasClass('_full-screen')) {
+		navList.find('.navigation__item._hidden').show()
+	}
 	
 	if (navList.find('.navigation__item._hidden').length) {
 		jQuery('#hamburger').addClass('_shown') 
@@ -36,7 +39,7 @@ setInterval(function() {
 }, 350)
 
 function hideElements() {
-	const navWidth = navList.outerWidth();
+	const navWidth = deviceWidth > 870 ? navList.outerWidth() - 95 : navList.outerWidth();
 	if (deviceWidth < 420) {
 		navList.find('.navigation__item').each(function(index, element) {
 			if (index < 2) return true;
@@ -94,7 +97,7 @@ jQuery('#hamburger').click(function() {
 		navList.find('.navigation__item._hidden').hide();
 		setTimeout(function() {
 			nav.removeClass('_full-screen');	
-			jQuery('body').removeClass('modalOpened');
+			jQuery('html').removeClass('modalOpened');
 			nav.animate({top: 0}, 300)
 		}, 500)
 
@@ -104,7 +107,7 @@ jQuery('#hamburger').click(function() {
 		navList.find('.navigation__item._hidden').show()
 		setTimeout(function() {
 			nav.addClass('_full-screen');
-			jQuery('body').addClass('modalOpened')
+			jQuery('html').addClass('modalOpened')
 			nav.animate({top: 0}, 500)
 		}, 300)
 

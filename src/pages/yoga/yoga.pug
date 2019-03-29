@@ -14,7 +14,7 @@ block content
 			+serviceHead({
 				'image': './assets/images/content/yoga',
 				'text': 'Современное направление йоги с использованием подвесных гамаков: уникальное сочетание асан йоги и лечебной гимнастики в воздухе.',
-				'link': 'javascript:void(0)'
+				'link': 'http://kindofheaven.ru/leader/gallery.html'
 			})
 			.service-trainer
 				h2.subtitle ЙОГА В ГАМАКАХ ПОЗВОЛЯЕТ
@@ -48,7 +48,7 @@ block content
 				h3.title ЙОГА В ГАМАКАХ ДЛЯ ДЕТЕЙ
 				+photoItem({
 					'text': '<p>Это развивающая программа для детей 6-12 лет с использованием гамака. Философия Йоги в гамаках для детей — веселье, выход из зоны комфорта. Выполняя прыжки, подъемы, раскачиваясь и находясь в полете дети учатся рассчитывать силы и контролировать страх. Дети, занимающиеся Антигравити Kids, получают умственное и физическое преимущество перед сверстниками. Программа способствует развитию основных жизненных навыков, развивает внимание, эмоции, гибкость тела и мышления. Урок проходит в игровой форме.</p>',
-					'image': './assets/images/content/photo-item8',
+					'image': './assets/images/content/gallery/yoga/1',
 					'right': '_right'
 				})
 					.photo-item__buttons
@@ -70,12 +70,12 @@ block content
 		'className': 'sub-modal'
 	})
 		p.sub-modal--title ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ
-		form#subForm
+		form
 			.form__inputs
-				+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
-				+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
-			+agree({'id': 'agreement', 'name': 'agreement'})
-			+button({'id': 'formSectionButton', 'text': 'Записаться'})
+				+input({'text': 'Имя', 'id': 'yoganame', 'name': 'name', 'required': true, 'type': 'text'})
+				+input({'text': 'Телефон', 'id': 'yogaphone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+			+agree({'id': 'yogaagreement', 'name': 'agreement'})
+			+button({'id': 'yogaformSectionButton', 'text': 'Записаться'})
 	+modal({
 		'id': 'yogaGeneral',
 		'className': 'yoga-modal'

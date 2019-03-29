@@ -3,5 +3,5 @@ mixin footerSocial(socials)
 	ul
 		each item in socials
 			li.footer__social--item
-				a.footer__social--link(href=item.href)
+				a.footer__social--link(href=item.href target="_blank")
 					+icon(item.icon)

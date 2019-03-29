@@ -80,7 +80,7 @@
 		-webkit-align-items: flex-end;
 		        align-items: flex-end;
 		margin-bottom: 50px;
-		@include respond-below(md) {
+		@media (max-width: 800px) {
 			-webkit-flex-direction: column;
 			    -ms-flex-direction: column;
 			        flex-direction: column;
@@ -97,7 +97,7 @@
 				width: calc((100% - 16px)/4);
 				flex: 0 0 calc((100% - 16px)/4);
 			}
-			@include respond-below(md) {
+			@media (max-width: 800px) {
 				width: 100%;
 				flex: 0 0 auto;
 				margin-bottom: 15px;
@@ -139,7 +139,7 @@
 		.button {
 			width: calc((100% - 120px)/4);
 			flex: 0 0 calc((100% - 120px)/4);
-			@include respond-below(md) {
+			@media (max-width: 800px) {
 				width: 100%;
 				flex: 0 0 auto;
 				margin-top: 30px;

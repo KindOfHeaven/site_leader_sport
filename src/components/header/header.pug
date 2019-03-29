@@ -8,7 +8,7 @@ mixin header()
 					+icon('logo')
 				.header__info
 					a.header__info--phone(href="tel:88123801027") 8 (812) 380-10-27
-					a.header__info--callback#callback(href="javascript:void(0)") Обратный звонок
+					a.header__info--callback.modal__open#callbackModal__open(href="javascript:void(0)") Обратный звонок
 		+navigation(
 			[
 				{title: 'Акции', href: 'http://kindofheaven.ru/leader/stock.html'},
@@ -33,17 +33,17 @@ mixin header()
 						{title: 'Детская комната', href: 'http://kindofheaven.ru/leader/childroom.html'}
 					]
 				},
-				{title: 'Галерея', href: 'javascript:void(0)'},
-				{title: 'Команда', href: 'javascript:void(0)'},
+				{title: 'Галерея', href: 'http://kindofheaven.ru/leader/gallery.html'},
+				{title: 'Команда', href: 'http://kindofheaven.ru/leader/team.html'},
 				{title: 'Информация', href: 'javascript:void(0)', submenu: 
 					[
 						{title: 'Новости', href: 'http://kindofheaven.ru/leader/news.html'},
-						{title: 'Правила посещения детских секций', href: 'javascript:void(0)'},
-						{title: 'Правила клуба', href: 'javascript:void(0)'},
-						{title: 'Документы', href: 'javascript:void(0)'},
-						{title: 'Политика конфиденциальности', href: 'javascript:void(0)'}
+						{title: 'Правила посещения детских секций', href: 'http://kindofheaven.ru/leader/childrules.html'},
+						{title: 'Правила клуба', href: 'http://kindofheaven.ru/leader/rules.html'},
+						{title: 'Документы', href: 'http://kindofheaven.ru/leader/documents.html'},
+						{title: 'Политика конфиденциальности', href: 'http://kindofheaven.ru/leader/policy.html'}
 					]
 				},
-				{title: 'Контакты', href: 'javascript:void(0)'}
+				{title: 'Контакты', href: 'http://kindofheaven.ru/leader/contacts.html'}
 			], "header__navigation"
 		)

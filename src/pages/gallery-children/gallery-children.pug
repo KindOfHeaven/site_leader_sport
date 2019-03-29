@@ -1,0 +1,91 @@
+extends ../layout.pug
+
+block content
+	include ../../components/gallery/gallery.pug
+	.gallery-page
+		.container
+			h1.title Галерея
+			.gallery__dropdown
+				.gallery__dropdown--header#galleryDropdown Клуб
+				nav.gallery__tabs
+					a.gallery__tab._active(href="javascript:void(0)" data-tab="fighting") КЛУБ
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="dancing") Групповые занятия
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="functional") ДСА
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="gymnastics") Функциональный тренинг
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="gymnastics") Йога в гамаках
+					a.gallery__tab(href="http://kindofheaven.ru/leader/gallery.html" data-tab="gymnastics") Детская комната
+					a.gallery__tab._last(href="http://kindofheaven.ru/leader/gallery-events.html" data-tab="fitness") Мероприятия
+			+gallery([
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small4',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main2',
+					'small': 'assets/images/content/gallery/small3',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small2',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main2',
+					'small': 'assets/images/content/gallery/small1',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small5',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main2',
+					'small': 'assets/images/content/gallery/small6',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small4',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main2',
+					'small': 'assets/images/content/gallery/small3',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small2',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small1',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main2',
+					'small': 'assets/images/content/gallery/small5',
+					'alt': 'Image alt'
+				},
+				{
+					'type': 'image',
+					'large': 'assets/images/content/gallery/main1',
+					'small': 'assets/images/content/gallery/small6',
+					'alt': 'Image alt'
+				},
+			])

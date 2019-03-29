@@ -3,6 +3,9 @@ extends ../layout.pug
 block content
 	include ../../components/button/button.pug
 	include ../../components/icon/icon.pug
+	include ../../components/modal/modal.pug
+	include ../../components/input/input.pug
+	include ../../components/agree/agree.pug
 	.single-subscription
 		.container
 			h1.title АБОНЕМЕНТЫ
@@ -69,3 +72,14 @@ block content
 					source(srcset="./assets/images/template/man.webp" type="image/type")
 					source(srcset="./assets/images/template/man.png" type="image/png")
 					img(src="./assets/images/template/man.png" alt="man")
+	+modal({
+		'id': 'subModal',
+		'className': 'sub-modal'
+	})
+		p.sub-modal--title ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ
+		form
+			.form__inputs
+				+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
+				+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+			+agree({'id': 'agreement', 'name': 'agreement'})
+			+button({'id': 'formSectionButton', 'text': 'Записаться'})

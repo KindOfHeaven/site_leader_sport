@@ -14,7 +14,7 @@ block content
 			+serviceHead({
 				'image': './assets/images/content/ft',
 				'text': 'Программа, построенная на постоянно варьируемых функциональных движениях, выполняемых с высокой интенсивностью.',
-				'link': 'javascript:void(0)'
+				'link': 'http://kindofheaven.ru/leader/gallery.html'
 			})
 			.service-functional
 				+serviceLine(
@@ -107,12 +107,12 @@ block content
 			.service__photo-items
 				+photoItem({
 					'text': '<p>Программа состоит из последовательности силовых упражнений, с конечной целью улучшения общей физической формы, реакции, выносливости и готовности к любой жизненной ситуации, требующей активных физических действий.</p>',
-					'image': './assets/images/content/photo-item1',
+					'image': './assets/images/content/gallery/functional/1',
 					'right': '_right'
 				})
 				+photoItem({
 					'text': '<p>В программе комбинируются такие действия как: бег (спринтерские забеги), гребля (на специальных тренажерах), прыжки (со скакалкой или  на препятствия), лазание по канатам, работа с «железом» (гантели, гири, штанга), перенос предметов (медбол), упражнения на кольцах, переворачивание покрышек (огромных) и многие другие.</p>',
-					'image': './assets/images/content/photo-item2'
+					'image': './assets/images/content/gallery/functional/2'
 				})
 			.service-subscriptions
 				p.subtitle АБОНЕМЕНТ НА ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ
@@ -156,9 +156,9 @@ block content
 		'className': 'sub-modal'
 	})
 		p.sub-modal--title ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ
-		form#subForm
+		form
 			.form__inputs
-				+input({'text': 'Имя', 'id': 'name', 'name': 'name', 'required': true, 'type': 'text'})
-				+input({'text': 'Телефон', 'id': 'phone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
-			+agree({'id': 'agreement', 'name': 'agreement'})
-			+button({'id': 'formSectionButton', 'text': 'Записаться'})
+				+input({'text': 'Имя', 'id': 'functionalname', 'name': 'name', 'required': true, 'type': 'text'})
+				+input({'text': 'Телефон', 'id': 'functionalphone', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+			+agree({'id': 'functionalagreement', 'name': 'agreement'})
+			+button({'id': 'functionalformSectionButton', 'text': 'Записаться'})

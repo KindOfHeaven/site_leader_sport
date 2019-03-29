@@ -1,5 +1,5 @@
-mixin list(items)
-	ul.list
+mixin list(items, className)
+	ul.list(class=className)
 		each item in items
 			li.list__item
 				span.list__item--mark

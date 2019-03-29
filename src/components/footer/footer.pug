@@ -4,43 +4,46 @@ mixin footer()
 	include ../footerNav/footerNav.pug
 	include ../footerSocial/footerSocial.pug
 	include ../footerDocs/footerDocs.pug
+	include ../modal/modal.pug
+	include ../input/input.pug
+	include ../agree/agree.pug
+	include ../button/button.pug
 	footer.footer
 		.container
 			.footer__line
 				.footer__block.footer__logo
-					a(href="https://kindofheaven.ru/leader/stock.html")
+					a(href="https://kindofheaven.ru/leader/")
 						+icon('logo')
 				nav.footer__block.footer__nav
 					+footerNav(
 						[
 							{'text': 'Акции', 'href':'http://kindofheaven.ru/leader/stock.html'},
 							{'text': 'Расписание', 'href':'javascript:void(0)'},
-							{'text': 'Услуги', 'href':'http://kindofheaven.ru/leader/gym.html'},
 							{'text': 'Абонементы', 'href':'http://kindofheaven.ru/leader/subscriptions.html'},
-							{'text': 'Детям', 'href':'http://kindofheaven.ru/leader/dsa.html'},
-							{'text': 'Галерея', 'href':'javascript:void(0)'},
-							{'text': 'Команда', 'href':'javascript:void(0)'},
-							{'text': 'Информация', 'href':'javascript:void(0)'},
-							{'text': 'Контакты', 'href':'javascript:void(0)'}
+							{'text': 'ДСА', 'href':'http://kindofheaven.ru/leader/dsa.html'},
+							{'text': 'Галерея', 'href':'http://kindofheaven.ru/leader/gallery.html'},
+							{'text': 'Команда', 'href':'http://kindofheaven.ru/leader/team.html'},
+							{'text': 'Новости', 'href':'http://kindofheaven.ru/leader/news.html'},
+							{'text': 'Контакты', 'href':'http://kindofheaven.ru/leader/contacts.html'}
 						]
 					)
 				.footer__block.footer__social
 					+footerSocial(
 						[
 							{
-								'icon': 'vk', 'href': 'javascript:void(0)'
+								'icon': 'vk', 'href': 'https://vk.com/fc_lidersport'
 							},
 							{
-								'icon': 'facebook', 'href': 'javascript:void(0)'
+								'icon': 'facebook', 'href': 'https://www.facebook.com/lidersport154'
 							},
 							{
-								'icon': 'instagram', 'href': 'javascript:void(0)'
+								'icon': 'instagram', 'href': 'http://instagram.com/lider_sport'
 							},
 							{
-								'icon': 'google_play', 'href': 'javascript:void(0)'
+								'icon': 'google_play', 'href': 'https://play.google.com/store/apps/details?id=me.fitcloud.app.android.app108&amp;hl=ru'
 							},
 							{
-								'icon': 'appstore', 'href': 'javascript:void(0)'
+								'icon': 'appstore_orange', 'href': 'https://itunes.apple.com/ru/app/lider-sport/id920734802?mt=8'
 							}
 						]
 					)
@@ -50,12 +53,23 @@ mixin footer()
 				.footer__block.footer__docs
 					+footerDocs(
 						[
-							{'text': 'Правила клуба', 'href':'javascript:void(0)'},
-							{'text': 'Документы', 'href':'javascript:void(0)'},
-							{'text': 'Политика конфиденциальности', 'href':'javascript:void(0)'}
+							{'text': 'Правила клуба', 'href':'http://kindofheaven.ru/leader/rules.html'},
+							{'text': 'Документы', 'href':'http://kindofheaven.ru/leader/documents.html'},
+							{'text': 'Политика конфиденциальности', 'href':'http://kindofheaven.ru/leader/policy.html'}
 						]
 					)
 				.footer__block.footer__copyright
 					p.footer__copyright--text ©  Лидер Спорт, 2019
 	+preloader()
-	script(src="./js/main.js")
+	+modal({
+		'id': 'callbackModal',
+		'className': 'sub-modal'
+	})
+		p.sub-modal--title ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ
+		form#subForm
+			.form__inputs
+				+input({'text': 'Имя', 'id': 'nameCallback', 'name': 'name', 'required': true, 'type': 'text'})
+				+input({'text': 'Телефон', 'id': 'phoneCallback', 'name': 'phone', 'required': true, 'type': 'text','className': 'phone-input'})
+			+agree({'id': 'agreementCallback', 'name': 'agreement'})
+			+button({'id': 'formSectionButtonCallback', 'text': 'Записаться'})
+	script(src="./js/main.js" async)

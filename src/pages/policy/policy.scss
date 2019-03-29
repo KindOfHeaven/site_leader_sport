@@ -1,0 +1,8 @@
+.policy-page {
+	padding-bottom: 100px;
+	.title {
+		@include respond-below(sm) {
+			font-size: 21px;
+		}
+	}
+}

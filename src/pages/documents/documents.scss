@@ -1,0 +1,47 @@
+.documents-page {
+	padding-bottom: 100px;
+	.documents__links {
+		margin-bottom: 150px;
+		padding: 0 95px;
+		@media (max-width: 960px) {
+			padding: 0;
+			margin-bottom: 100px;
+		}
+		.documents__links--link {
+			color: $dark-gray;
+			width: 100%;
+			display: block;
+			font-size: 20px;
+			line-height: 24px;
+			-webkit-transition: color .3s linear;
+			   -moz-transition: color .3s linear;
+			    -ms-transition: color .3s linear;
+			     -o-transition: color .3s linear;
+			        transition: color .3s linear;
+			position: relative;
+			font-weight: 500;
+			@include respond-below(md) {
+				line-height: 32px;
+			}
+			&:after {
+				content: "";
+				width: 10px;
+				height: 17px;
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				margin-left: 7px;
+				border-left: 10px solid $orange;
+				border-right: 10px solid transparent;
+				border-top: 8.5px solid transparent;
+				border-bottom: 8.5px solid transparent;
+			}
+			&:hover {
+				color: $orange;
+			}
+			&:not(:last-child) {
+				margin-bottom: 45px;
+			}
+		}
+	}
+}

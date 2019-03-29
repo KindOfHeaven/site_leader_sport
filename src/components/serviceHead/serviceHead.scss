@@ -97,7 +97,7 @@
 				bottom: 40px;
 				@include respond-below(lg) {
 					right: -80px;
-					bottom: -25px;
+					bottom: 20px;
 				}
 				@media (max-width: 960px) {
 					position: static;

@@ -1,0 +1,203 @@
+.gallery {
+	width: 100%;
+	height: auto;
+	.gallery__single-item {
+		width: 100%;
+		height: auto;
+		text-align: center;
+		picture {
+			width: 100%;
+			height: auto;
+			object-position: center;
+			object-fit: cover
+		}
+	}
+	position: relative;
+	.gallery-slider {
+		padding: 0 100px;
+		@include respond-below(md) {
+			padding: 0 50px;
+		}
+		@include respond-below(sm) {
+			padding: 0 20px;
+		}
+		width: 100%;
+		position: relative;
+		.slick-track {
+			display: flex;
+			-webkit-align-items: center;
+			        align-items: center;
+		}
+		.gallery-slider__slide {
+			max-height: 470px;
+			a {
+				width: 100%;
+				max-height: 470px;
+				height: 100%;
+				display: block;
+				picture, img {
+					width: 100%;
+					height: 100%;
+					max-height: 470px;
+					display: block;
+					object-fit: cover;
+					object-position: center bottom;
+				}
+			}
+		}
+		.slick-prev {
+			position: absolute;
+			top: 50%;
+			left: 20px;
+			@include respond-below(md) {
+				left: -10px;
+			}
+			border-right: 20px solid $orange;
+			border-left: 20px solid transparent;
+			border-top: 16px solid transparent;
+			border-bottom: 16px solid transparent;
+			@include respond-below(sm) {
+				border-right: 8px solid $orange;
+				border-left: 8px solid transparent;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			cursor: pointer;
+			-webkit-transition: border-color .3s linear;
+			   -moz-transition: border-color .3s linear;
+			    -ms-transition: border-color .3s linear;
+			     -o-transition: border-color .3s linear;
+			        transition: border-color .3s linear;
+			font-size: 0;
+			&:before {
+				display: none;
+			}
+			&.slick-disabled {
+				border-right: 20px solid #f0f0f0;
+				@include respond-below(sm) {
+					border-right: 8px solid #f0f0f0
+				}
+				cursor: default;
+			}
+		}
+		.slick-next {
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			@include respond-below(md) {
+				right: -10px;
+			}
+			border-left: 20px solid $orange;
+			border-right: 20px solid transparent;
+			border-top: 16px solid transparent;
+			border-bottom: 16px solid transparent;
+			@include respond-below(sm) {
+				border-right: 8px solid transparent;
+				border-left: 8px solid $orange;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			cursor: pointer;
+			-webkit-transition: border-color .3s linear;
+			   -moz-transition: border-color .3s linear;
+			    -ms-transition: border-color .3s linear;
+			     -o-transition: border-color .3s linear;
+			        transition: border-color .3s linear;
+			font-size: 0;
+			&:before {
+				display: none;
+			}
+			&.slick-disabled {
+				border-left: 20px solid #f0f0f0;
+				@include respond-below(sm) {
+					border-left: 8px solid #f0f0f0;
+				}
+				cursor: default;
+			}
+		}
+	}
+	.gallery-slider__nav {
+		width: calc(100% + 30px);
+		position: relative;
+		left: -15px;
+		height: 102px;
+		margin-top: 50px;
+		@include respond-below(sm) {
+			margin-top: 30px;
+			height: 122px;
+		}
+		.slick-slide {
+			cursor: pointer;
+			margin: 0 15px;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			@include respond-below(lg) {
+				margin: 0 12px;
+			}
+			@include respond-below(md) {
+				margin: 0 7px;
+			}
+			@include respond-below(sm) {
+				margin: 0 5px;
+				border-top: 3px solid transparent;
+				border-bottom: 3px solid transparent;
+			}
+			filter: grayscale(100%);
+			-webkit-transition: filter .3s linear, border .3s linear;
+			   -moz-transition: filter .3s linear, border .3s linear;
+			    -ms-transition: filter .3s linear, border .3s linear;
+			     -o-transition: filter .3s linear, border .3s linear;
+			        transition: filter .3s linear, border .3s linear;
+			position: relative;
+			&:hover, &.slick-current {
+				filter: grayscale(0)
+			}
+			&.slick-current {
+				&:after {
+					width: calc(100% + 8px);
+					height: calc(100% + 8px);
+					position: absolute;
+					top: -4px;
+					left: -4px;
+					content: "";
+					z-index: 1;
+					background: $orange;
+					-webkit-transition: background .3s linear;
+					   -moz-transition: background .3s linear;
+					    -ms-transition: background .3s linear;
+					     -o-transition: background .3s linear;
+					        transition: background .3s linear;
+					
+					@include respond-below(sm) {
+						width: calc(100% + 6px);
+						height: calc(100% + 6px);
+						top: -3px;
+						left: -3px;
+					}
+				}
+			}
+			& > div {
+				position: relative;
+				z-index: 3;
+			}
+			.gallery-slider__nav--slide {
+				height: 100%;
+				display: block !important;
+			}
+			picture {
+				display: block;
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+		}
+	}
+}
+.fancybox-inner {
+	height: 100% !important;
+}

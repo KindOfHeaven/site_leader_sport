@@ -1,0 +1,10 @@
+mixin galleryEvents(events)
+	.gallery-events
+		each event in events
+			a.gallery-events__single(href=event.href)
+				span.gallery-events__single--image
+					picture
+						source(srcset=event.image+'.webp' type='image/webp')
+						source(srcset=event.image+'.jpg' type='image/jpeg')
+						img(src=event.image+'.jpg' alt="Event")
+				span.gallery-events__single--name !{event.name}

@@ -165,8 +165,13 @@
 				&:nth-child(-n + 12) {
 					margin-bottom: 50px;
 				}
-				left: 0;
+				opacity: 1;
 				position: relative;
+				-webkit-transition: opacity .5s linear;
+							   -moz-transition: opacity .5s linear;
+							    -ms-transition: opacity .5s linear;
+							     -o-transition: opacity .5s linear;
+							        transition: opacity .5s linear;
 				@include respond-below(lg) {
 					flex: 0 0 calc((100% - 60px)/3);
 					width: calc((100% - 60px)/3);
@@ -195,16 +200,7 @@
 			}
 			&._hidding {
 				.timetable__item {
-					@for $i from 0 through 16 {
-						&:nth-child(#{$i}) {
-							-webkit-transition: left .3s linear ($i + 1)/10*1s;
-							   -moz-transition: left .3s linear ($i + 1)/10*1s;
-							    -ms-transition: left .3s linear ($i + 1)/10*1s;
-							     -o-transition: left .3s linear ($i + 1)/10*1s;
-							        transition: left .3s linear ($i + 1)/10*1s;
-						}
-					}
-					left: -125%;
+					opacity: 0;
 				}
 			}
 			&._waiting {
@@ -212,22 +208,18 @@
 				top: 0;
 				left: 0;
 				.timetable__item {
-					right: -125%;
-					left: auto;
+					opacity: 0;
+					
+				-webkit-transition: opacity .5s linear .3s;
+							   -moz-transition: opacity .5s linear .3s;
+							    -ms-transition: opacity .5s linear .3s;
+							     -o-transition: opacity .5s linear .3s;
+							        transition: opacity .5s linear .3s;
 				}
 			}
 			&._showing {
 				.timetable__item {
-					@for $i from 0 through 16 {
-						&:nth-child(#{$i}) {
-							-webkit-transition: right .3s linear ($i + 1)/10*1s;
-							   -moz-transition: right .3s linear ($i + 1)/10*1s;
-							    -ms-transition: right .3s linear ($i + 1)/10*1s;
-							     -o-transition: right .3s linear ($i + 1)/10*1s;
-							        transition: right .3s linear ($i + 1)/10*1s;
-						}
-					}
-					right: 0;
+					opacity: 1;
 				}
 			}
 	}
@@ -275,10 +267,13 @@
 			height: 40px;
 			margin-right: 40px;
 			width: 40px;
-			color: transparent;
 			svg {
+				color: transparent;
 				width: 100%;
 				height: 100%;
+				&.attention {
+					color: $orange;
+				}
 			}
 		}
 		.timetable__feature--content {

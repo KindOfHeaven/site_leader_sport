@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block content
+	include ../../components/icon/icon.pug
+	include ../../components/marker/marker.pug
+	include ../../components/quote/quote.pug
+	.contacts-page
+		.container
+			h1.title КОНТАКТЫ
+			.contacts-page__inner
+				.contacts-page__content
+					p.contacts-page__content--text Санкт-Петербург, метро Проспект Просвещения / Парнас 
+					p.contacts-page__content--text проспект Энгельса, 154а<br> ТРК "Гранд Каньон", 3 этаж
+					p.contacts-page__content--text До 10.00 вход в клуб через бизнес-центр со стороны ул. Шостаковича
+					p.contacts-page__content--text
+						+icon('time')
+						| Будние дни: 07:00 - 00:00<br> Выходные и праздничные дни: 09:00 - 22:00 
+					+marker({'icon': 'mail', 'href': 'mailto:info@lider-sport.ru', 'text': 'info@lider-sport.ru'})
+					+marker({'icon': 'phone', 'href': 'tel:+78123801027', 'text': '+7 (812) 380-10-27'})
+				.contacts-page__map
+					script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acd8924e917c15efbbb87e5a9f02daa546d574a80a4068ff0a70684b689d5b384&amp;width=555&amp;height=383&amp;lang=ru_RU&amp;scroll=true")
+			.contacts-page__ad
+				.contacts-page__quote
+					+quote('Я не ожидаю подходящего настроения, если его ожидать, ничего не достигнешь')
+				.contacts-page__ad--content
+					.contacts-page__ad--title PR / РЕКЛАМА
+					p.contacts-page__ad--text Коннова Юлия
+					+marker({'icon': 'mail', 'href': 'mailto:konnova.y@gmail.com', 'text': 'konnova.y@gmail.com'})
+					+marker({'icon': 'phone', 'href': 'tel:+79818968486', 'text': '+7 (981) 896-84-86'})

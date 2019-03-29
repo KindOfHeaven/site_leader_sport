@@ -1,0 +1,6 @@
+mixin rulesNavigation(list)
+	nav.rules-navigation
+		ul.rules-navigation__list
+			each item in list
+				li.rules-navigation__item
+					a.rules-navigation__link.anchor(href='#'+item.href) #{item.name}

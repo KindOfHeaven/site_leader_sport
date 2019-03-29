@@ -5,9 +5,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
-    <meta name="HandheldFriendly" content="true">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" href="favicon.ico"><!--[if lt IE 9]>
+    <meta name="HandheldFriendly" content="true"><link rel="apple-touch-icon" sizes="57x57" href="https://kindofheaven.ru/leader/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://kindofheaven.ru/leader/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://kindofheaven.ru/leader/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://kindofheaven.ru/leader/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://kindofheaven.ru/leader/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://kindofheaven.ru/leader/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://kindofheaven.ru/leader/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://kindofheaven.ru/leader/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kindofheaven.ru/leader/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://kindofheaven.ru/leader/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kindofheaven.ru/leader/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://kindofheaven.ru/leader/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kindofheaven.ru/leader/favicon-16x16.png">
+<link rel="manifest" href="https://kindofheaven.ru/leader/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://kindofheaven.ru/leader/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <title>Leader Sport</title>
     <link rel="stylesheet" href="./css/style.css">
@@ -19,7 +34,7 @@
             <svg class="icon logo">
               <use xlink:href="./assets/images/template/sprite.svg#logo"></use>
             </svg></a>
-          <div class="header__info"><a class="header__info--phone" href="tel:88123801027">8 (812) 380-10-27</a><a class="header__info--callback" id="callback" href="javascript:void(0)">Обратный звонок</a></div>
+          <div class="header__info"><a class="header__info--phone" href="tel:88123801027">8 (812) 380-10-27</a><a class="header__info--callback modal__open" id="callbackModal__open" href="javascript:void(0)">Обратный звонок</a></div>
         </div>
       </div>
       <nav class="navigation header__navigation" id="nav">
@@ -46,18 +61,18 @@
               <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="http://kindofheaven.ru/leader/childroom.html">Детская комната</a></li>
             </ul>
           </li>
-          <li class="navigation__item"><a class="navigation__link" href="javascript:void(0)">Галерея</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="javascript:void(0)">Команда</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="http://kindofheaven.ru/leader/gallery.html">Галерея</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="http://kindofheaven.ru/leader/team.html">Команда</a></li>
           <li class="navigation__item has_submenu"><a class="navigation__link" href="javascript:void(0)">Информация</a>
             <ul class="navigation__submenu">
               <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="http://kindofheaven.ru/leader/news.html">Новости</a></li>
-              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="javascript:void(0)">Правила посещения детских секций</a></li>
-              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="javascript:void(0)">Правила клуба</a></li>
-              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="javascript:void(0)">Документы</a></li>
-              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="javascript:void(0)">Политика конфиденциальности</a></li>
+              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="http://kindofheaven.ru/leader/childrules.html">Правила посещения детских секций</a></li>
+              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="http://kindofheaven.ru/leader/rules.html">Правила клуба</a></li>
+              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="http://kindofheaven.ru/leader/documents.html">Документы</a></li>
+              <li class="navigation__submenu--item"><a class="navigation__submenu--link" href="http://kindofheaven.ru/leader/policy.html">Политика конфиденциальности</a></li>
             </ul>
           </li>
-          <li class="navigation__item"><a class="navigation__link" href="javascript:void(0)">Контакты</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="http://kindofheaven.ru/leader/contacts.html">Контакты</a></li>
         </ul><a class="navigation__hamburger" id="hamburger" href="javascript:void(0)">
           <svg class="icon exit">
             <use xlink:href="./assets/images/template/sprite.svg#exit"></use>
@@ -117,8 +132,8 @@
               <div class="photo-item _right">
                 <div class="photo-item__image">
                   <picture>
-                    <source srcset="./assets/images/content/photo-item8.webp" type="image/webp">
-                    <source srcset="./assets/images/content/photo-item8.jpg" type="image/jpeg"><img src="./assets/images/content/photo-item8.jpg" alt="Photo item">
+                    <source srcset="./assets/images/content/gallery/yoga/1.webp" type="image/webp">
+                    <source srcset="./assets/images/content/gallery/yoga/1.jpg" type="image/jpeg"><img src="./assets/images/content/gallery/yoga/1.jpg" alt="Photo item">
                   </picture>
                 </div>
                 <div class="photo-item__content"><p>Это развивающая программа для детей 6-12 лет с использованием гамака. Философия Йоги в гамаках для детей — веселье, выход из зоны комфорта. Выполняя прыжки, подъемы, раскачиваясь и находясь в полете дети учатся рассчитывать силы и контролировать страх. Дети, занимающиеся Антигравити Kids, получают умственное и физическое преимущество перед сверстниками. Программа способствует развитию основных жизненных навыков, развивает внимание, эмоции, гибкость тела и мышления. Урок проходит в игровой форме.</p></div>
@@ -167,19 +182,19 @@
         <div class="modal__wrapper">
           <div class="modal sub-modal" id="formModal">
             <p class="sub-modal--title">ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ</p>
-            <form id="subForm">
+            <form>
               <div class="form__inputs">
-                    <label class="input" for="name">Имя*
-                      <input id="name" type="text" name="name" required>
+                    <label class="input" for="yoganame">Имя*
+                      <input id="yoganame" type="text" name="name" required>
                     </label>
-                    <label class="input" for="phone">Телефон*
-                      <input class="phone-input" id="phone" type="text" name="phone" required>
+                    <label class="input" for="yogaphone">Телефон*
+                      <input class="phone-input" id="yogaphone" type="text" name="phone" required>
                     </label>
               </div>
-                  <label class="checkbox" for="agreement">
-                    <input type="checkbox" id="agreement" name="agreement"><span class="checkbox__mark"></span>Я даю <a href="javascript:void(0)"> согласие </a> на обработку персональных данных
+                  <label class="checkbox" for="yogaagreement">
+                    <input type="checkbox" id="yogaagreement" name="agreement"><span class="checkbox__mark"></span>Я даю <a href="javascript:void(0)"> согласие </a> на обработку персональных данных
                   </label>
-                  <button class="button" type="button" id="formSectionButton">Записаться</button>
+                  <button class="button" type="button" id="yogaformSectionButton">Записаться</button>
             </form>
             <div class="modal__closer">
               <svg class="icon exit">
@@ -271,7 +286,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__line">
-          <div class="footer__block footer__logo"><a href="https://kindofheaven.ru/leader/stock.html">
+          <div class="footer__block footer__logo"><a href="https://kindofheaven.ru/leader/">
               <svg class="icon logo">
                 <use xlink:href="./assets/images/template/sprite.svg#logo"></use>
               </svg></a></div>
@@ -279,36 +294,35 @@
             <ul class="footer__list">
               <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/stock.html">Акции</a></li>
               <li class="footer__list--item"><a class="footer__list--link" href="javascript:void(0)">Расписание</a></li>
-              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/gym.html">Услуги</a></li>
               <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/subscriptions.html">Абонементы</a></li>
-              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/dsa.html">Детям</a></li>
-              <li class="footer__list--item"><a class="footer__list--link" href="javascript:void(0)">Галерея</a></li>
-              <li class="footer__list--item"><a class="footer__list--link" href="javascript:void(0)">Команда</a></li>
-              <li class="footer__list--item"><a class="footer__list--link" href="javascript:void(0)">Информация</a></li>
-              <li class="footer__list--item"><a class="footer__list--link" href="javascript:void(0)">Контакты</a></li>
+              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/dsa.html">ДСА</a></li>
+              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/gallery.html">Галерея</a></li>
+              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/team.html">Команда</a></li>
+              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/news.html">Новости</a></li>
+              <li class="footer__list--item"><a class="footer__list--link" href="http://kindofheaven.ru/leader/contacts.html">Контакты</a></li>
             </ul>
           </nav>
           <div class="footer__block footer__social">
             <ul>
-              <li class="footer__social--item"><a class="footer__social--link" href="javascript:void(0)">
+              <li class="footer__social--item"><a class="footer__social--link" href="https://vk.com/fc_lidersport" target="_blank">
                   <svg class="icon vk">
                     <use xlink:href="./assets/images/template/sprite.svg#vk"></use>
                   </svg></a></li>
-              <li class="footer__social--item"><a class="footer__social--link" href="javascript:void(0)">
+              <li class="footer__social--item"><a class="footer__social--link" href="https://www.facebook.com/lidersport154" target="_blank">
                   <svg class="icon facebook">
                     <use xlink:href="./assets/images/template/sprite.svg#facebook"></use>
                   </svg></a></li>
-              <li class="footer__social--item"><a class="footer__social--link" href="javascript:void(0)">
+              <li class="footer__social--item"><a class="footer__social--link" href="http://instagram.com/lider_sport" target="_blank">
                   <svg class="icon instagram">
                     <use xlink:href="./assets/images/template/sprite.svg#instagram"></use>
                   </svg></a></li>
-              <li class="footer__social--item"><a class="footer__social--link" href="javascript:void(0)">
+              <li class="footer__social--item"><a class="footer__social--link" href="https://play.google.com/store/apps/details?id=me.fitcloud.app.android.app108&amp;amp;hl=ru" target="_blank">
                   <svg class="icon google_play">
                     <use xlink:href="./assets/images/template/sprite.svg#google_play"></use>
                   </svg></a></li>
-              <li class="footer__social--item"><a class="footer__social--link" href="javascript:void(0)">
-                  <svg class="icon appstore">
-                    <use xlink:href="./assets/images/template/sprite.svg#appstore"></use>
+              <li class="footer__social--item"><a class="footer__social--link" href="https://itunes.apple.com/ru/app/lider-sport/id920734802?mt=8" target="_blank">
+                  <svg class="icon appstore_orange">
+                    <use xlink:href="./assets/images/template/sprite.svg#appstore_orange"></use>
                   </svg></a></li>
             </ul>
           </div>
@@ -319,9 +333,9 @@
           </div>
           <div class="footer__block footer__docs">
             <ul class="footer__docs--list">
-              <li class="footer__docs--list--item"><a class="footer__docs--list--link" href="javascript:void(0)">Правила клуба</a></li>
-              <li class="footer__docs--list--item"><a class="footer__docs--list--link" href="javascript:void(0)">Документы</a></li>
-              <li class="footer__docs--list--item"><a class="footer__docs--list--link" href="javascript:void(0)">Политика конфиденциальности</a></li>
+              <li class="footer__docs--list--item"><a class="footer__docs--list--link" href="http://kindofheaven.ru/leader/rules.html">Правила клуба</a></li>
+              <li class="footer__docs--list--item"><a class="footer__docs--list--link" href="http://kindofheaven.ru/leader/documents.html">Документы</a></li>
+              <li class="footer__docs--list--item"><a class="footer__docs--list--link" href="http://kindofheaven.ru/leader/policy.html">Политика конфиденциальности</a></li>
             </ul>
           </div>
           <div class="footer__block footer__copyright">
@@ -337,6 +351,30 @@
         <div class="preloader__inner--strip _three"></div>
       </div>
     </div>
-    <script src="./js/main.js"></script>
+    <div class="modal__wrapper">
+      <div class="modal sub-modal" id="callbackModal">
+        <p class="sub-modal--title">ОСТАВЬ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ТОБОЙ<br> В БЛИЖАЙШЕЕ ВРЕМЯ</p>
+        <form id="subForm">
+          <div class="form__inputs">
+            <label class="input" for="nameCallback">Имя*
+              <input id="nameCallback" type="text" name="name" required="required"/>
+            </label>
+            <label class="input" for="phoneCallback">Телефон*
+              <input class="phone-input" id="phoneCallback" type="text" name="phone" required="required"/>
+            </label>
+          </div>
+          <label class="checkbox" for="agreementCallback">
+            <input type="checkbox" id="agreementCallback" name="agreement"/><span class="checkbox__mark"></span>Я даю <a href="javascript:void(0)"> согласие </a> на обработку персональных данных
+          </label>
+          <button class="button" type="button" id="formSectionButtonCallback">Записаться</button>
+        </form>
+        <div class="modal__closer">
+          <svg class="icon exit">
+            <use xlink:href="./assets/images/template/sprite.svg#exit"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js" async="async"></script>
   </body>
 </html>

@@ -1,0 +1,1323 @@
+extends ../layout.pug
+
+block content
+	include ../../components/team/team.pug
+	include ../../components/modal/modal.pug
+	include ../../components/button/button.pug
+	include ../../components/list/list.pug
+	.team-page
+		.container
+			h1.title Команда
+			.team__dropdown
+				.team__dropdown--header#teamDropdown Все инструкторы
+				nav.team__tabs#team__tabs
+					a.team__tab._active(href="javascript:void(0)" data-tab="all") Все 
+					a.team__tab(href="javascript:void(0)" data-tab="gym") Тренажерный зал 
+					a.team__tab(href="javascript:void(0)" data-tab="group") Групповые занятия 
+					a.team__tab(href="javascript:void(0)" data-tab="fighting") Единоборства 
+					a.team__tab(href="javascript:void(0)" data-tab="functional") Функциональный тренинг 
+					a.team__tab(href="javascript:void(0)" data-tab="children") Детская спортивная академия 
+					a.team__tab._last(href="javascript:void(0)" data-tab="massage") кабинет массажа 
+					a.team__tab._last(href="javascript:void(0)" data-tab="fitness") кабинет фитнес-диагностики 
+			#team__tables
+				+team(
+				'all',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person1'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person2'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person3'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person4'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person5'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person6'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person7'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person8'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person9'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person10'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person11'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person12'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person13'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person14'
+					},
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person15'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person16'
+					},
+				],
+				'_active'
+			)
+				+team(
+				'gym',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person17'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person18'
+					}
+				]
+			)
+				+team(
+				'group',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person19'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person20'
+					}
+				]
+			)
+				+team(
+				'fighting',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person21'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person22'
+					}
+				]
+			)
+				+team(
+				'functional',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person23'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person24'
+					}
+				]
+			)
+				+team(
+				'children',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person25'
+					},
+					{
+						'name': 'Гамзатов Руслан',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person26'
+					}
+				]
+			)
+				+team(
+				'massage',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person27'
+					}
+				]
+			)
+				+team(
+				'fitness',
+				[
+					{
+						'name': 'Стрекаловская Наталья',
+						'image': 'assets/images/content/gallery/team1',
+						'modalId': 'person28'
+					}
+				]
+			)
+	+modal({
+		'id': 'person1Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_1'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person2Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_2'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person3Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_3'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person4Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_4'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person5Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_5'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person6Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_6'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person7Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_7'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person8Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_8'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person9Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_9'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person10Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_10'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person11Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_11'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person12Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_12'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person13Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_13'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person14Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_14'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person15Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_15'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person16Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_16'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person17Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_17'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person18Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_18'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person19Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_19'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person20Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_20'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person21Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_21'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person22Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_22'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person23Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_23'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person24Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_24'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person25Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_25'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person26Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_26'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person27Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_27'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')
+	+modal({
+		'id': 'person28Modal',
+		'className': 'person-modal'
+	})
+		.person-modal__inner
+			.person-modal__preview
+				.person-modal__image
+					.person-modal__name Гамзатов Руслан
+					picture
+						source(srcset="assets/images/content/photo.webp" type="image/webp")
+						source(srcset="assets/images/content/photo.png" type="image/png")
+						img(src="assets/images/content/photo.png" alt="Photo")
+				+button({
+					'text': 'Записаться к тренеру',
+					'href': 'javascript:void(0)',
+					'className': '_colored modal__open',
+					'id': 'callbackModal__open_28'
+				})
+			.person-modal__content
+				p.person-modal__content--text
+					span Образование:
+					| <br>НГУ физической культуры, спорта и здоровья им. А.Ф.Лесгафта
+				p.person-modal__content--text
+					span Направление: 
+					| тренажерный зал
+				p.person-modal__content--text
+					span Опыт работы: 
+					| 10 лет
+				p.person-modal__content--text
+					span Достижение и награды:
+				+list([
+					'КМС по спортивному и боевому самбо',
+					'двукратный чемпион мира по UKADO (2011г.)',
+					'трехкратный чемпион России по UKADO 2008, 2009, 2011 гг.',
+					'чемпион и призер всероссийских турниров по спортивному и боевому самбо 2009-2011 гг.',
+					'3-е место на международном турнире по самбо памяти 6ой роты ВДВ 2011г.',
+					'чемпион СПб по самбо 2012г.',
+					'вице-чемпион СПБ по пляжному бодибилдингу 2014г.',
+					'3-е место СПб по пляжному бодибилдингу 2016г.'
+				], '_animated')

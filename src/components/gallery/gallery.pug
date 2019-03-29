@@ -1,0 +1,27 @@
+mixin gallery(gallery)
+	.gallery
+		if gallery.length == 1
+			.gallery__single-item
+				if gallery[0].type == 'image'
+					picture
+						source(srcset=gallery[0].large+'.webp' type='image/webp')
+						source(srcset=gallery[0].large+'.jpg' type='image/jpeg')
+						img(src=gallery[0].large+'.jpg' alt=gallery[0].alt)
+		else
+			.gallery-slider#gallerySlider
+				each item in gallery
+					.gallery-slider__slide
+						if item.type == 'image'
+							a.fancybox(href=item.large+'.jpg' data-fancybox="gallery")
+								picture
+									source(srcset=item.large+'.webp' type='image/webp')
+									source(srcset=item.large+'.jpg' type='image/jpeg')
+									img(src=item.large+'.jpg' alt=item.alt)
+			.gallery-slider__nav#gallerySliderNav
+				each item in gallery
+					.gallery-slider__nav--slide
+						if item.type == 'image'
+							picture
+								source(srcset=item.small+'.webp' type='image/webp')
+								source(srcset=item.small+'.jpg' type='image/jpeg')
+								img(src=item.small+'.jpg' alt=item.alt)

@@ -50,7 +50,7 @@ const path = {
         },
         src: { 
             html: ['src/pages/**/*.pug', '!src/pages/layout.pug'], 
-            js: ['node_modules/jquery/dist/jquery.js','node_modules/jquery-mask-plugin/dist/jquery.mask.js','node_modules/slick-carousel/slick/slick.js','node_modules/fancybox/dist/js/jquery.fancybox.js','node_modules/svgxuse/svgxuse.js','src/**/*.js'],
+            js: ['node_modules/jquery/dist/jquery.js','node_modules/jquery-mask-plugin/dist/jquery.mask.js','node_modules/slick-carousel/slick/slick.js','node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js','node_modules/svgxuse/svgxuse.js','src/**/*.js'],
             css: 'src/styles/style.scss',
             img: ['src/assets/images/**/*.*', '!src/assets/images/svg'],
             fonts: 'src/assets/fonts/**/*.*'
